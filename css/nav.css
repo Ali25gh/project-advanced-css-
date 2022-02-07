@@ -1,0 +1,365 @@
+ul.nav__lists {
+    position: relative;
+    /* (position: relative;) baraye inke mega menu bar asas ul position begirad na bar asas li balaye khod */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.nav__list {
+    position: relative;
+}
+
+.nav__list:hover>ul.nav__sublists1 {
+    transform: scale(1);
+    /* (scale(1)) goftim hala bozorg namayi ma barabar yek bashad (ta zaher shavad)*/
+
+
+}
+
+a.nav__link {
+    position: relative;
+    display: block;
+    padding: 1.3rem;
+    transition: all .3s ease;
+}
+
+.nav__link:hover {
+    color: #3c4858;
+    transition: all 0.75s ease;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 0.3rem;
+    border-radius: .5rem;
+    background-color: #0d62da;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+/* sublists1 ul */
+.nav__sublists1,
+.nav__sublists2 {
+    position: absolute;
+    width: 20rem;
+    background-color: white;
+    border-top: 0.3rem solid #e76f51;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 4px rgb(61, 61, 61);
+    transform: scale(0);
+    transform-origin: top right;
+    transition: all 0.3s ease;
+}
+
+.nav__sublists1 i {
+    margin-left: 1rem;
+    color: #457b9d;
+}
+
+/* sublist1 li*/
+.nav__sublist1 {
+    position: relative;
+}
+
+.nav__show-ul:hover>ul.nav__sublists2 {
+    transform: scale(1);
+}
+
+.nav__sublist1>a i:last-child {
+    margin-right: auto;
+
+}
+
+/* sublists2 ul*/
+.nav__sublists2 {
+    right: 100%;
+    top: 10rem;
+}
+
+/* all submenu links */
+.nav__sublists1 a {
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+    color: #444;
+    transition: all 0.3s ease;
+}
+
+.nav__sublists1 a:hover {
+    padding-right: 1.5rem;
+    background-color: #f1f1f1;
+    color: #0d62da;
+}
+
+
+/* nav arrow */
+
+.nav__arrow {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: .7rem;
+    height: .7rem;
+    border: 1px solid #3c4858;
+    /* border-width: 0 1px 1px 0; */
+    border-top-width: 0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    transform: rotate(45deg);
+    transition: all .4s ease;
+}
+
+.nav__link:hover>span {
+    transform: rotate(225deg);
+}
+
+.nav__arrow-saier {
+    position: absolute;
+    left: 1.7rem;
+    width: .7rem;
+    height: .7rem;
+    border: 1px solid #3c4858;
+    /* border-width: 0 1px 1px 0; */
+    border-top-width: 0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    transform: rotate(224deg);
+    transition: all .6s ease;
+}
+
+.nav__hover-a:hover>span {
+    transform: rotate(130deg);
+}
+
+/* mega menu */
+.nav__mega {
+    position: static;
+}
+
+.nav__mega:hover>.nav__mega-content {
+    transform: scale(1, 1);
+}
+
+.nav__mega-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    white-space: nowrap;
+    /* (white-space: nowrap;) yani be hich vajh khati ke mega menu bar rooye an position absolute grefte ra nashkan */
+    background-image: conic-gradient(#98d6f3, #fea2b1, #f7f1fa, #98d6f3);
+    border-top: 0.3rem solid #e76f51;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 4px rgb(61, 61, 61);
+    transform: scale(1, 0);
+    /* (scale(1, 0)) ba inkar va (transform-origin: top;) mega menu az balaye ul baz mishavad */
+    transform-origin: top;
+    transition: all .3s ease;
+}
+
+@media only screen and (min-width:768px) and (max-width:1200px)
+
+/* yani agar screen bein in do ta bood emal shavad */
+    {
+    .nav__mega-content {
+        width: 67rem;
+    }
+}
+
+.nav__mega-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+ul.nav__mega-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__mega-column>h4 {
+    padding: 2rem;
+    border-bottom: 3px solid #e76f51;
+}
+
+.nav__mega-column>.nav__button {
+    align-self: center;
+}
+
+.nav__mega-lists a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    color: #444;
+}
+
+.nav__mega-lists a:hover {
+    color: #0d62da;
+}
+
+.nav__mega-lists i {
+    margin-left: .5rem;
+    transition: all .3s ease;
+}
+
+.nav__mega-lists a:hover>i {
+    color: #444;
+    transform: rotate(1turn);
+    /* (1turn) yani yek dor becharkh */
+}
+
+/* burger menu */
+
+.nav__burger-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 4rem;
+    height: 4rem;
+    user-select: none;
+    /* (user-select: none)baraye inke nashavad select kard chizi ra agar in ra rooye all bezarim ba yek click kol matn entekhab mishavad */
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 769px) {
+    .nav__burger-label {
+        display: none !important;
+    }
+}
+
+.nav__burger-label>span {
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #2196f3;
+    transition: all .5s cubic-bezier(.55, -0.45, .57, 1.46);
+}
+
+.nav__burger-label>span:nth-of-type(1)
+
+/* (span:nth-of-type(1))yani chandomin element entekhab shavad dar inja ma avalin span ra entekhab kardim */
+    {
+    width: 80%;
+}
+
+.nav__burger-label>span:nth-of-type(2) {
+    width: 100%;
+}
+
+.nav__burger-label>span:nth-of-type(3) {
+    width: 60%;
+}
+
+.nav__burger-checkbox {
+    display: none;
+}
+
+.nav__burger-checkbox:checked~.nav__burger-label :nth-child(1)
+
+/* (~)goftim agar box checked shod boro eleman haye payin tar ra bebin agar chizi bood code dakhel parantez ejra shavad  */
+    {
+    width: 50%;
+    transform-origin: bottom;
+    /* yani hol che mehvari becharkhad (bala)*/
+    transform: rotate(45deg) translate(-1rem, 1.6rem);
+    /* (translate(-1rem, 1.6rem))meghdar aval baraye mehvar x va dovomi y */
+}
+
+.nav__burger-checkbox:checked+.nav__burger-label :nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.nav__burger-checkbox:checked~.nav__burger-label :nth-of-type(3) {
+    width: 50%;
+    transform: rotate(45deg) translate(-0.5rem, -0.1rem);
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+    .nav__mobaile-wrap {
+        position: fixed;
+        top: 9.2rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        /* mikhahim karbar dar mobaile rooye mehvar y pish beravad (bala)*/
+        z-index: 100;
+        display: none;
+        width: 100vw;
+        height: auto;
+        /* baraye inke andaze chaild khod shavad (bala) */
+        background-color: #edfcff;
+    }
+
+    .nav__burger-checkbox:checked~.nav__mobaile-wrap {
+        display: block;
+    }
+
+    .nav__link {
+        width: calc(100vw - 3rem);
+    }
+
+    .nav__lists {
+        flex-direction: column;
+    }
+
+    .nav__list:not(:last-child)
+
+    /* not(:last-child) migooyim agar nabood be akharin child style ra bede */
+        {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav__sublists1,
+    .nav__sublists2,
+    .nav__mega-content {
+        /* reset setings */
+        position: relative;
+        top: 0;
+        right: 0;
+        display: none;
+        width: 100%;
+        margin-right: 2rem;
+        border: none;
+        background: none;
+        box-shadow: none;
+        transform: scale(1)
+    }
+
+    .nav__list:hover>.nav__sublists1,
+    .nav__show-ul:hover>.nav__sublists2,
+    .nav__mega:hover>.nav__mega-content {
+        display: block;
+    }
+
+    .nav__mega-column {
+        align-items: center;
+    }
+
+    .nav__hover-a:hover>span {
+        transform: rotate(45deg);
+    }
+
+}

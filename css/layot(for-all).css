@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "vazir";
+    src: url("../fonts/eot/Vazir-Thin.eot");
+    src: url("../fonts/Vazir-Thin.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/woff2/Vazir-Thin.woff2") format("woff2"),
+        url("../fonts/woff/Vazir-Thin.woff") format("woff"),
+        url("../fonts/ttf/Vazir-Thin.ttf") format("truetype");
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* (box-sizing: border-box;) baraye inke padding va margin default bardashte shavad */
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* ba in kar bar hasb 10 px mohasebe mishavad na shoonzdah pixel default pas har 1rem mishe 10pxel */
+}
+
+body {
+    font-family: Verdana, vazir, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+button,
+textarea,
+select,
+input {
+    font-family: inherit;
+    /* (inherit) yani font ra az body begir */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #0d62da;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+a:hover {
+    color: #e76f51;
+    
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    /* in do ta ra neveshtim braye inke vasat ghrar begirad (bala) */
+    padding-right: 1rem;
+    padding-left: 1rem;
+    /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
+}
+
+/* (min-width)kamtar az:   (max-width)bishtar az: */
+
+@media only screen and (min-width: 576px)
+
+/* (min-width:576px)576 jozv noghat standard ast ke boot strap ham baraye responsiv az in noghat estefade mikone */
+    {
+    .container {
+        max-width: 540px;
+        /* yani tool container az meghdar dade shode bishtar nashe */
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Helper */
+
+/* Flex helpers(yek bar benevis baraye hamishe estefade kon) */
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* padding margin helper */
+
+.pt-10 {
+    padding-top: 1rem;
+}
+
+.pb-10 {
+    padding-bottom: 1rem;
+}
+
+.pt-20 {
+    padding-top: 2rem;
+}
+
+.pb-20 {
+    padding-bottom: 2rem;
+}
+
+.margin__r-auto {
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .show-small {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .show-large {
+        display: block;
+    }
+}
