@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* (box-sizing: border-box;) baraye inke padding va margin default bardashte shavad */
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* ba in kar bar hasb 10 px mohasebe mishavad na shoonzdah pixel default pas har 1rem mishe 10pxel */
+}
+
+body {
+    font-family: Verdana, vazir, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+button,
+textarea,
+select,
+input {
+    font-family: inherit;
+    /* (inherit) yani font ra az body begir */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #0d62da;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+a:hover {
+    color: #e76f51;
+    
+}
