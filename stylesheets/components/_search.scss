@@ -7,9 +7,9 @@
     width: 5rem;
     height: 5rem;
     padding-bottom: 1.5rem;
-    border: 0.3rem solid #457b9d;
+    border: 0.3rem solid $color-blue3;
     border-radius: 5rem;
-    transition: width .5s cubic-bezier(.55, -0.45, .57, 1.46);
+    transition: width .5s $cubic-bezier;
     /* aval entekhab mikonim be kodam property bedahim(dar inja width) baad zaman animation baad noe animation */
   
   }
@@ -21,7 +21,7 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    border: 0.1rem solid #457b9d;
+    border: 0.1rem solid $color-blue3;
     margin-top: 1.5rem;
     margin-right: auto;
     margin-left: 0.2rem;
@@ -40,7 +40,7 @@
   }
   
   .search__input::placeholder {
-    color: #999999;
+    color: $color-gray4;
   }
   
   .search__button {
@@ -71,7 +71,7 @@
     left: 0.2rem;
     width: 1.8rem;
     height: 0.9rem;
-    border: 0.5rem solid #457b9d;
+    border: 0.5rem solid $color-blue3;
     transition: all 300ms ease;
   }
   
@@ -111,7 +111,7 @@
     top: 0.2rem;
     width: 1.5rem;
     height: 0.6rem;
-    background-color: #457b9d;
+    background-color: $color-blue3;
     border-radius: 1rem;
     transition: all 300ms ease;
   }
@@ -139,7 +139,7 @@
   .search:focus-within .search__circle::before,
   .search:focus-within .search__circle::after {
     border-radius: 1rem;
-    background-color: #457b9d;
+    background-color: $color-blue3;
     width: 1.5rem;
     height: 0.6rem;
   }

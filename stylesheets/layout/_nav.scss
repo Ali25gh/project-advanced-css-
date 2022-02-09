@@ -27,7 +27,7 @@ a.nav__link {
 }
 
 .nav__link:hover {
-    color: #3c4858;
+    color: $color-brown1;
     transition: all 0.75s ease;
 }
 
@@ -39,7 +39,7 @@ a.nav__link {
     width: 0%;
     height: 0.3rem;
     border-radius: .5rem;
-    background-color: #0d62da;
+    background-color: $color-blue1;
     transform: translateX(-50%);
     transition: all .3s ease;
 }
@@ -54,7 +54,7 @@ a.nav__link {
     position: absolute;
     width: 20rem;
     background-color: white;
-    border-top: 0.3rem solid #e76f51;
+    border-top: 0.3rem solid $color-orange1;
     border-radius: 0.3rem;
     box-shadow: 0 0 4px rgb(61, 61, 61);
     transform: scale(0);
@@ -64,7 +64,7 @@ a.nav__link {
 
 .nav__sublists1 i {
     margin-left: 1rem;
-    color: #457b9d;
+    color: $color-blue3;
 }
 
 /* sublist1 li*/
@@ -98,8 +98,8 @@ a.nav__link {
 
 .nav__sublists1 a:hover {
     padding-right: 1.5rem;
-    background-color: #f1f1f1;
-    color: #0d62da;
+    background-color: $color-gray1;
+    color: $color-blue1;
 }
 
 
@@ -111,7 +111,7 @@ a.nav__link {
     left: 0;
     width: .7rem;
     height: .7rem;
-    border: 1px solid #3c4858;
+    border: 1px solid $color-brown1;
     /* border-width: 0 1px 1px 0; */
     border-top-width: 0;
     border-right-width: 1px;
@@ -130,7 +130,7 @@ a.nav__link {
     left: 1.7rem;
     width: .7rem;
     height: .7rem;
-    border: 1px solid #3c4858;
+    border: 1px solid $color-brown1;
     /* border-width: 0 1px 1px 0; */
     border-top-width: 0;
     border-right-width: 1px;
@@ -164,7 +164,7 @@ a.nav__link {
     white-space: nowrap;
     /* (white-space: nowrap;) yani be hich vajh khati ke mega menu bar rooye an position absolute grefte ra nashkan */
     background-image: conic-gradient(#98d6f3, #fea2b1, #f7f1fa, #98d6f3);
-    border-top: 0.3rem solid #e76f51;
+    border-top: 0.3rem solid $color-orange1;
     border-radius: 0.3rem;
     box-shadow: 0 0 4px rgb(61, 61, 61);
     transform: scale(1, 0);
@@ -198,7 +198,7 @@ ul.nav__mega-lists {
 
 .nav__mega-column>h4 {
     padding: 2rem;
-    border-bottom: 3px solid #e76f51;
+    border-bottom: 3px solid $color-orange1;
 }
 
 .nav__mega-column>.nav__button {
@@ -214,7 +214,7 @@ ul.nav__mega-lists {
 }
 
 .nav__mega-lists a:hover {
-    color: #0d62da;
+    color: $color-blue1;
 }
 
 .nav__mega-lists i {
@@ -250,8 +250,8 @@ ul.nav__mega-lists {
 .nav__burger-label>span {
     height: 0.5rem;
     border-radius: 0.5rem;
-    background-color: #2196f3;
-    transition: all .5s cubic-bezier(.55, -0.45, .57, 1.46);
+    background-color: $color-blue2;
+    transition: all .5s $cubic-bezier;
 }
 
 .nav__burger-label>span:nth-of-type(1)
@@ -310,7 +310,7 @@ ul.nav__mega-lists {
         width: 100vw;
         height: auto;
         /* baraye inke andaze chaild khod shavad (bala) */
-        background-color: #edfcff;
+        background-color: $color-blue4;
     }
 
     .nav__burger-checkbox:checked~.nav__mobaile-wrap {

@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: Verdana, vazir, Tahoma, sans-serif;
+    font-family: $font-stack;
     font-size: 1.5rem;
 }
 
@@ -30,12 +30,12 @@ ul {
 }
 
 a {
-    color: #0d62da;
+    color: $color-blue1;
     text-decoration: none;
     transition: color .3s ease;
 }
 
 a:hover {
-    color: #e76f51;
+    color: $color-orange1;
     
 }
