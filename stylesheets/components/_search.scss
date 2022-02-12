@@ -1,5 +1,5 @@
 .search {
-  $parent: &;  // moteghaier tarif kardim va intori az moteghaier estefade mikonim( #{$parent}__input )
+  $parent: &; // moteghaier tarif kardim va intori az moteghaier estefade mikonim( #{$parent}__input )
   position: relative;
   display: flex;
   justify-content: center;
@@ -134,17 +134,18 @@
         transform: rotate(45deg);
       }
     }
-    &__stand {
-      top: 1.3rem;
+    .search__stand {
+      top: 1.5rem;
       transform: rotate(0);
+
       &::before {
-        top: -0.5rem;
+        top: -0.7rem;
         transform: rotate(-45deg);
       }
+
       &::after {
         transform: rotate(45deg);
       }
     }
   }
 }
-

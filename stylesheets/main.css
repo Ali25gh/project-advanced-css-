@@ -51,39 +51,36 @@ a:hover {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  /* in do ta ra neveshtim braye inke vasat ghrar begirad (bala) */
   padding-right: 1rem;
   padding-left: 1rem;
-  /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
-  /* (min-width)kamtar az:   (max-width)bishtar az: */
 }
 
 @media only screen and (min-width: 576px) {
-  .container .container {
+  .container {
     max-width: 540px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .container .container {
+  .container {
     max-width: 720px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .container .container {
+  .container {
     max-width: 960px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container .container {
+  .container {
     max-width: 1140px;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  .container .container {
+  .container {
     max-width: 1320px;
   }
 }
@@ -343,26 +340,36 @@ a:hover {
           transform: rotate(45deg);
 }
 
-.search:focus-within__stand {
-  top: 1.3rem;
+.search:focus-within .search__stand {
+  top: 1.5rem;
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
 
-.search:focus-within__stand::before {
-  top: -0.5rem;
+.search:focus-within .search__stand::before {
+  top: -0.7rem;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.search:focus-within__stand::after {
+.search:focus-within .search__stand::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-ul.nav__lists {
+.nav {
+  /* sublists1 ul */
+  /* sublist1 li*/
+  /* sublists2 ul*/
+  /* all submenu links */
+  /* nav arrow */
+  /* mega menu */
+  /* burger menu */
+  /* Responsive */
+}
+
+.nav__lists {
   position: relative;
-  /* (position: relative;) baraye inke mega menu bar asas ul position begirad na bar asas li balaye khod */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,15 +388,14 @@ ul.nav__lists {
 .nav__list:hover > ul.nav__sublists1 {
   -webkit-transform: scale(1);
           transform: scale(1);
-  /* (scale(1)) goftim hala bozorg namayi ma barabar yek bashad (ta zaher shavad)*/
 }
 
-a.nav__link {
+.nav a.nav__link {
   position: relative;
   display: block;
   padding: 1.3rem;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav__link:hover {
@@ -405,21 +411,19 @@ a.nav__link {
   left: 50%;
   width: 0%;
   height: 0.3rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #0d62da;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav__link:hover::after {
   width: 100%;
 }
 
-/* sublists1 ul */
-.nav__sublists1,
-.nav__sublists2 {
+.nav__sublists1, .nav__sublists2 {
   position: absolute;
   width: 20rem;
   background-color: white;
@@ -440,7 +444,6 @@ a.nav__link {
   color: #457b9d;
 }
 
-/* sublist1 li*/
 .nav__sublist1 {
   position: relative;
 }
@@ -454,13 +457,11 @@ a.nav__link {
   margin-right: auto;
 }
 
-/* sublists2 ul*/
 .nav__sublists2 {
   right: 100%;
   top: 10rem;
 }
 
-/* all submenu links */
 .nav__sublists1 a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,13 +481,12 @@ a.nav__link {
   color: #0d62da;
 }
 
-/* nav arrow */
 .nav__arrow {
   position: absolute;
   top: 40%;
   left: 0;
-  width: .7rem;
-  height: .7rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border: 1px solid #3c4858;
   /* border-width: 0 1px 1px 0; */
   border-top-width: 0;
@@ -495,8 +495,8 @@ a.nav__link {
   border-left-width: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .nav__link:hover > span {
@@ -507,8 +507,8 @@ a.nav__link {
 .nav__arrow-saier {
   position: absolute;
   left: 1.7rem;
-  width: .7rem;
-  height: .7rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border: 1px solid #3c4858;
   /* border-width: 0 1px 1px 0; */
   border-top-width: 0;
@@ -517,8 +517,8 @@ a.nav__link {
   border-left-width: 0;
   -webkit-transform: rotate(224deg);
           transform: rotate(224deg);
-  -webkit-transition: all .6s ease;
-  transition: all .6s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 .nav__hover-a:hover > span {
@@ -526,7 +526,6 @@ a.nav__link {
           transform: rotate(130deg);
 }
 
-/* mega menu */
 .nav__mega {
   position: static;
 }
@@ -562,8 +561,8 @@ a.nav__link {
   /* (scale(1, 0)) ba inkar va (transform-origin: top;) mega menu az balaye ul baz mishavad */
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
@@ -588,7 +587,7 @@ a.nav__link {
           align-items: flex-start;
 }
 
-ul.nav__mega-lists {
+.nav ul.nav__mega-lists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,9 +633,9 @@ ul.nav__mega-lists {
 }
 
 .nav__mega-lists i {
-  margin-left: .5rem;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  margin-left: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav__mega-lists a:hover > i {
@@ -646,7 +645,6 @@ ul.nav__mega-lists {
   /* (1turn) yani yek dor becharkh */
 }
 
-/* burger menu */
 .nav__burger-label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -719,7 +717,6 @@ ul.nav__mega-lists {
           transform: rotate(45deg) translate(-0.5rem, -0.1rem);
 }
 
-/* Responsive */
 @media only screen and (max-width: 768px) {
   .nav__mobaile-wrap {
     position: fixed;
@@ -752,9 +749,7 @@ ul.nav__mega-lists {
   .nav__list:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
-  .nav__sublists1,
-  .nav__sublists2,
-  .nav__mega-content {
+  .nav__sublists1, .nav__sublists2, .nav__mega-content {
     /* reset setings */
     position: relative;
     top: 0;
