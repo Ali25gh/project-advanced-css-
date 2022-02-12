@@ -1,37 +1,27 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar__search-box {
-    width: 20rem;
-}
-.navbar__nav{
-    flex-grow: 1;
-}
-
-@media only screen and (max-width: 768px) {
-    .navbar {
+    @media only screen and (max-width: 768px) {
         position: sticky;
         top: 0;
-        /*(top: 0;)  ba in kar migooim be samt bala sticky besho */
+        box-shadow: 0 0 4px #444444;
     }
 
-}
-
-@media only screen and (max-width: 992px) {
-
-    .navbar__search-box {
-        order: 1;
-        width: auto;
-        /* (auto)be CHAILD khod negah mikonad */
+    &__search-box {
+        width: 20rem;
+        @media only screen and (max-width: 992px) {
+            order: 1;
+            width: auto;
+        }
+    }
+    &__nav {
+        flex-grow: 1;
+        @media only screen and (max-width: 992px) {
+            flex-grow: 0;
+        }
     }
 
-    .navbar__logo {
-        order: 2;
-    }
-    .navbar__nav{
-        flex-grow: 0;
+    &__logo {
+        @media only screen and (max-width: 992px) {
+            order: 2;
+        }
     }
 }

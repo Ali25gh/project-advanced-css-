@@ -6,42 +6,33 @@
     padding-right: 1rem;
     padding-left: 1rem;
     /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
-}
-
-/* (min-width)kamtar az:   (max-width)bishtar az: */
-
-@media only screen and (min-width: 576px)
-
-/* (min-width:576px)576 jozv noghat standard ast ke boot strap ham baraye responsiv az in noghat estefade mikone */
-    {
-    .container {
-        max-width: 540px;
-        /* yani tool container az meghdar dade shode bishtar nashe */
-
+    /* (min-width)kamtar az:   (max-width)bishtar az: */
+    @media only screen and (min-width: 576px) {
+        .container {
+            max-width: 540px;
+        }
     }
-}
-
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 720px;
+    @media only screen and (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
     }
-}
 
-@media only screen and (min-width: 992px) {
-    .container {
-        max-width: 960px;
+    @media only screen and (min-width: 992px) {
+        .container {
+            max-width: 960px;
+        }
     }
-}
-
-@media only screen and (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
+    @media only screen and (min-width: 1200px) {
+        .container {
+            max-width: 1140px;
+        }
     }
-}
 
-@media only screen and (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
+    @media only screen and (min-width: 1400px) {
+        .container {
+            max-width: 1320px;
+        }
     }
 }
 
@@ -61,7 +52,6 @@
 .justify-content-center {
     justify-content: center;
 }
-
 
 .justify-content-space-between {
     justify-content: space-between;
@@ -97,14 +87,14 @@
     display: none;
 }
 
-@media only screen and (max-width: 992px) {
-    .show-small {
+.show-small {
+        @media only screen and (max-width: 992px) {
         display: block;
     }
 }
 
-@media only screen and (min-width: 993px) {
-    .show-large {
+.show-large {
+        @media only screen and (min-width: 993px) {
         display: block;
     }
 }

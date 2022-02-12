@@ -55,36 +55,35 @@ a:hover {
   padding-right: 1rem;
   padding-left: 1rem;
   /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
+  /* (min-width)kamtar az:   (max-width)bishtar az: */
 }
 
-/* (min-width)kamtar az:   (max-width)bishtar az: */
 @media only screen and (min-width: 576px) {
-  .container {
+  .container .container {
     max-width: 540px;
-    /* yani tool container az meghdar dade shode bishtar nashe */
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
+  .container .container {
     max-width: 720px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .container {
+  .container .container {
     max-width: 960px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container {
+  .container .container {
     max-width: 1140px;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  .container {
+  .container .container {
     max-width: 1320px;
   }
 }
@@ -245,7 +244,7 @@ a:hover {
   background-color: transparent;
 }
 
-span.search__circle {
+.search__circle {
   position: absolute;
   height: 2rem;
   width: 2rem;
@@ -253,8 +252,7 @@ span.search__circle {
   left: 0;
 }
 
-.search__circle::before,
-.search__circle::after {
+.search__circle::before, .search__circle::after {
   content: "";
   position: absolute;
   left: 0.2rem;
@@ -308,7 +306,6 @@ span.search__circle {
   transition: all 300ms ease;
 }
 
-/* (:focus-within)yani agar roosh click shod (haman on click ast vali baraye css) */
 .search:focus-within {
   width: 20rem;
 }
@@ -328,8 +325,7 @@ span.search__circle {
   left: -0.3rem;
 }
 
-.search:focus-within .search__circle::before,
-.search:focus-within .search__circle::after {
+.search:focus-within .search__circle::before, .search:focus-within .search__circle::after {
   border-radius: 1rem;
   background-color: #457b9d;
   width: 1.5rem;
@@ -347,19 +343,19 @@ span.search__circle {
           transform: rotate(45deg);
 }
 
-.search:focus-within .search__stand {
+.search:focus-within__stand {
   top: 1.3rem;
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
 
-.search:focus-within .search__stand::before {
+.search:focus-within__stand::before {
   top: -0.5rem;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.search:focus-within .search__stand::after {
+.search:focus-within__stand::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -789,35 +785,18 @@ ul.nav__mega-lists {
   }
 }
 
-.navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navbar__search-box {
-  width: 20rem;
-}
-
-.navbar__nav {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
 @media only screen and (max-width: 768px) {
   .navbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /*(top: 0;)  ba in kar migooim be samt bala sticky besho */
+    -webkit-box-shadow: 0 0 4px #444444;
+            box-shadow: 0 0 4px #444444;
   }
+}
+
+.navbar__search-box {
+  width: 20rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -826,17 +805,28 @@ ul.nav__mega-lists {
         -ms-flex-order: 1;
             order: 1;
     width: auto;
-    /* (auto)be CHAILD khod negah mikonad */
   }
-  .navbar__logo {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
+}
+
+.navbar__nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media only screen and (max-width: 992px) {
   .navbar__nav {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar__logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 /*# sourceMappingURL=main.css.map */
