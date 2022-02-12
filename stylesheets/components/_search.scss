@@ -111,41 +111,47 @@
   &:focus-within {
     width: 20rem;
     @media only screen and (max-width: 768px) {
-      width: 12rem;
+        width: 12rem;
     }
+
     #{$parent}__input {
-      display: block;
+        display: block;
     }
+
     .search__circle {
-      top: 0.4rem;
-      left: -0.3rem;
-      &::before,
-      &::after {
-        border-radius: 1rem;
-        background-color: $color-blue3;
-        width: 1.5rem;
-        height: 0.6rem;
-      }
-      &::before {
         top: 0.4rem;
-        transform: rotate(-45deg);
-      }
-      &::after {
-        transform: rotate(45deg);
-      }
+        left: -0.3rem;
+        &::before,
+        &::after {
+            border-radius: 1rem;
+            background-color: $color-blue3;
+            width: 1.5rem;
+            height: 0.6rem;
+        }
+
+        &::before {
+            top: 0.4rem;
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
     }
+
     .search__stand {
-      top: 1.5rem;
-      transform: rotate(0);
+        top: 1.5rem;
+        transform: rotate(0);
 
-      &::before {
-        top: -0.7rem;
-        transform: rotate(-45deg);
-      }
+        &::before {
+            top: -0.7rem;
+            transform: rotate(-45deg);
+        }
 
-      &::after {
-        transform: rotate(45deg);
-      }
+        &::after {
+            transform: rotate(45deg);
+        }
+        
     }
-  }
+}
 }

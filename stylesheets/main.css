@@ -51,8 +51,11 @@ a:hover {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  /* in do ta ra neveshtim braye inke vasat ghrar begirad (bala) */
   padding-right: 1rem;
   padding-left: 1rem;
+  /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
+  /* (min-width)kamtar az:   (max-width)bishtar az: */
 }
 
 @media only screen and (min-width: 576px) {
@@ -390,7 +393,7 @@ a:hover {
           transform: scale(1);
 }
 
-.nav a.nav__link {
+.nav__link {
   position: relative;
   display: block;
   padding: 1.3rem;
@@ -402,6 +405,15 @@ a:hover {
   color: #3c4858;
   -webkit-transition: all 0.75s ease;
   transition: all 0.75s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__link:hover > span {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 
 .nav__link::after {
@@ -417,10 +429,6 @@ a:hover {
           transform: translateX(-50%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.nav__link:hover::after {
-  width: 100%;
 }
 
 .nav__sublists1, .nav__sublists2 {
@@ -444,24 +452,6 @@ a:hover {
   color: #457b9d;
 }
 
-.nav__sublist1 {
-  position: relative;
-}
-
-.nav__show-ul:hover > ul.nav__sublists2 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.nav__sublist1 > a i:last-child {
-  margin-right: auto;
-}
-
-.nav__sublists2 {
-  right: 100%;
-  top: 10rem;
-}
-
 .nav__sublists1 a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,6 +471,24 @@ a:hover {
   color: #0d62da;
 }
 
+.nav__sublist1 {
+  position: relative;
+}
+
+.nav__sublist1 > a i:last-child {
+  margin-right: auto;
+}
+
+.nav__show-ul:hover > ul.nav__sublists2 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.nav__sublists2 {
+  right: 100%;
+  top: 10rem;
+}
+
 .nav__arrow {
   position: absolute;
   top: 40%;
@@ -497,11 +505,6 @@ a:hover {
           transform: rotate(45deg);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-
-.nav__link:hover > span {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
 }
 
 .nav__arrow-saier {
@@ -587,7 +590,18 @@ a:hover {
           align-items: flex-start;
 }
 
-.nav ul.nav__mega-lists {
+.nav__mega-column > h4 {
+  padding: 2rem;
+  border-bottom: 3px solid #e76f51;
+}
+
+.nav__mega-column > .nav__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.nav__mega-lists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,17 +615,6 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.nav__mega-column > h4 {
-  padding: 2rem;
-  border-bottom: 3px solid #e76f51;
-}
-
-.nav__mega-column > .nav__button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .nav__mega-lists a {
@@ -632,17 +635,16 @@ a:hover {
   color: #0d62da;
 }
 
-.nav__mega-lists i {
-  margin-left: 0.5rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
 .nav__mega-lists a:hover > i {
   color: #444;
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
-  /* (1turn) yani yek dor becharkh */
+}
+
+.nav__mega-lists i {
+  margin-left: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav__burger-label {
@@ -696,27 +698,6 @@ a:hover {
   display: none;
 }
 
-.nav__burger-checkbox:checked ~ .nav__burger-label :nth-child(1) {
-  width: 50%;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  /* yani hol che mehvari becharkhad (bala)*/
-  -webkit-transform: rotate(45deg) translate(-1rem, 1.6rem);
-          transform: rotate(45deg) translate(-1rem, 1.6rem);
-  /* (translate(-1rem, 1.6rem))meghdar aval baraye mehvar x va dovomi y */
-}
-
-.nav__burger-checkbox:checked + .nav__burger-label :nth-child(2) {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.nav__burger-checkbox:checked ~ .nav__burger-label :nth-of-type(3) {
-  width: 50%;
-  -webkit-transform: rotate(45deg) translate(-0.5rem, -0.1rem);
-          transform: rotate(45deg) translate(-0.5rem, -0.1rem);
-}
-
 @media only screen and (max-width: 768px) {
   .nav__mobaile-wrap {
     position: fixed;
@@ -736,6 +717,22 @@ a:hover {
   }
   .nav__burger-checkbox:checked ~ .nav__mobaile-wrap {
     display: block;
+  }
+  .nav__burger-checkbox:checked ~ .nav__burger-label :nth-child(1) {
+    width: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: rotate(45deg) translate(-1rem, 1.6rem);
+            transform: rotate(45deg) translate(-1rem, 1.6rem);
+  }
+  .nav__burger-checkbox:checked + .nav__burger-label :nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .nav__burger-checkbox:checked ~ .nav__burger-label :nth-of-type(3) {
+    width: 50%;
+    -webkit-transform: rotate(45deg) translate(-0.5rem, -0.1rem);
+            transform: rotate(45deg) translate(-0.5rem, -0.1rem);
   }
   .nav__link {
     width: calc(100vw - 3rem);

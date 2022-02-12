@@ -2,20 +2,25 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    /* in do ta ra neveshtim braye inke vasat ghrar begirad (bala) */
     padding-right: 1rem;
     padding-left: 1rem;
+    /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
+    /* (min-width)kamtar az:   (max-width)bishtar az: */
     @media only screen and (min-width: 576px) {
         max-width: 540px;
     }
     @media only screen and (min-width: 768px) {
         max-width: 720px;
     }
+
     @media only screen and (min-width: 992px) {
         max-width: 960px;
     }
     @media only screen and (min-width: 1200px) {
         max-width: 1140px;
     }
+
     @media only screen and (min-width: 1400px) {
         max-width: 1320px;
     }
@@ -73,13 +78,13 @@
 }
 
 .show-small {
-        @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 992px) {
         display: block;
     }
 }
 
 .show-large {
-        @media only screen and (min-width: 993px) {
+    @media only screen and (min-width: 993px) {
         display: block;
     }
 }
