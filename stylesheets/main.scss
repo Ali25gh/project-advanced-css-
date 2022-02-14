@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "abstracts/variables";
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins", "abstracts/placeholder";
 
 @import "base/base", "base/fonts", "base/helpers", "base/taypography";
 

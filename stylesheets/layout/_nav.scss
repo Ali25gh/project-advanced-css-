@@ -42,7 +42,7 @@
         }
     }
 
-    /* sublists1 ul */
+    // sublists1 ul
     &__sublists1,
     &__sublists2 {
         position: absolute;
@@ -50,7 +50,7 @@
         background-color: white;
         border-top: 0.3rem solid $color-orange1;
         border-radius: 0.3rem;
-        box-shadow: 0 0 4px rgb(61, 61, 61);
+        box-shadow: 0 0 4px darken($color-gray1, 45%);
         transform: scale(0);
         transform-origin: top right;
         transition: all 0.3s ease;
@@ -75,7 +75,7 @@
         }
     }
 
-    /* sublist1 li*/
+    // sublist1 li
     &__sublist1 {
         position: relative;
         & > a i:last-child {
@@ -87,15 +87,15 @@
         transform: scale(1);
     }
 
-    /* sublists2 ul*/
+    // sublists2 ul
     &__sublists2 {
         right: 100%;
         top: 10rem;
     }
 
-    /* all submenu links */
+    // all submenu links
 
-    /* nav arrow */
+    // nav arrow
 
     &__arrow {
         position: absolute;
@@ -104,7 +104,7 @@
         width: 0.7rem;
         height: 0.7rem;
         border: 1px solid $color-brown1;
-        /* border-width: 0 1px 1px 0; */
+        // border-width: 0 1px 1px 0;
         border-top-width: 0;
         border-right-width: 1px;
         border-bottom-width: 1px;
@@ -119,7 +119,7 @@
         width: 0.7rem;
         height: 0.7rem;
         border: 1px solid $color-brown1;
-        /* border-width: 0 1px 1px 0; */
+        // border-width: 0 1px 1px 0;
         border-top-width: 0;
         border-right-width: 1px;
         border-bottom-width: 1px;
@@ -132,7 +132,7 @@
         transform: rotate(130deg);
     }
 
-    /* mega menu */
+    // mega menu
     &__mega {
         position: static;
         &:hover > .nav__mega-content {
@@ -149,16 +149,17 @@
         align-items: center;
         padding: 1rem;
         white-space: nowrap;
-        /* (white-space: nowrap;) yani be hich vajh khati ke mega menu bar rooye an position absolute grefte ra nashkan */
+        // (white-space: nowrap;) yani be hich vajh khati ke mega menu bar rooye an position absolute grefte ra nashkan
         background-image: conic-gradient(#98d6f3, #fea2b1, #f7f1fa, #98d6f3);
         border-top: 0.3rem solid $color-orange1;
         border-radius: 0.3rem;
-        box-shadow: 0 0 4px rgb(61, 61, 61);
+        box-shadow: 0 0 4px darken($color-gray1, 45%);
         transform: scale(1, 0);
-        /* (scale(1, 0)) ba inkar va (transform-origin: top;) mega menu az balaye ul baz mishavad */
+        // (scale(1, 0)) ba inkar va (transform-origin: top;) mega menu az balaye ul baz mishavad
         transform-origin: top;
         transition: all 0.3s ease;
-        @media only screen and (min-width: 768px) and (max-width: 1200px) /* yani agar screen bein in do ta bood emal shavad */ {
+        @media only screen and (min-width: 768px) and (max-width: 1200px) // yani agar screen bein in do ta bood emal shavad 
+        {
             width: 67rem;
         }
     }
@@ -203,7 +204,7 @@
         }
     }
 
-    /* burger menu */
+    // burger menu
 
     &__burger-label {
         display: flex;
@@ -212,7 +213,7 @@
         width: 4rem;
         height: 4rem;
         user-select: none;
-        /* (user-select: none)baraye inke nashavad select kard chizi ra agar in ra rooye all bezarim ba yek click kol matn entekhab mishavad */
+        // (user-select: none)baraye inke nashavad select kard chizi ra agar in ra rooye all bezarim ba yek click kol matn entekhab mishavad
         cursor: pointer;
         @media only screen and (min-width: 769px) {
             display: none !important;
@@ -241,7 +242,7 @@
         display: none;
     }
 
-    /* Responsive */
+    // Responsive
 
     @media only screen and (max-width: 768px) {
         &__mobaile-wrap {
@@ -252,12 +253,12 @@
             left: 0;
             overflow-x: hidden;
             overflow-y: scroll;
-            /* mikhahim karbar dar mobaile rooye mehvar y pish beravad (bala)*/
+            // mikhahim karbar dar mobaile rooye mehvar y pish beravad (bala)
             z-index: 100;
             display: none;
             width: 100vw;
             height: auto;
-            /* baraye inke andaze chaild khod shavad (bala) */
+            // baraye inke andaze chaild khod shavad (bala)
             background-color: $color-blue4;
         }
 
@@ -296,14 +297,15 @@
 
         &__list:not(:last-child)
     
-        /* not(:last-child) migooyim agar nabood be akharin child style ra bede */ {
+        // not(:last-child) migooyim agar nabood be akharin child style ra bede
+         {
             border-bottom: 1px solid #ccc;
         }
 
         &__sublists1,
         &__sublists2,
         &__mega-content {
-            /* reset setings */
+            // reset setings
             position: relative;
             top: 0;
             right: 0;

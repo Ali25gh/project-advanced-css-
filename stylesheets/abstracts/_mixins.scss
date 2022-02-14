@@ -1,0 +1,19 @@
+@mixin flex($justify-content: false, $align-items: false, $wrap: false) {
+    display: flex;
+
+    @if ($justify-content) {
+        justify-content: $justify-content;
+    }
+
+    @if ($align-items) {
+        align-items: $align-items;
+    }
+    @if ($wrap) {
+        flex-wrap: $wrap;
+    }
+}
+@mixin box($width, $height) {
+    width: $width + rem;
+    height: $height + rem;
+}
+

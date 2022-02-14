@@ -1,0 +1,8 @@
+@function image($file) {
+    @return url($base-path + "images/" + $file);
+}
+// background-image: image('logo-header.png');be in sooret estefade mishavad,,,($base-path) dar variable vojood darad
+@function font($file) {
+    @return url($base-path + "fonts/" + $file);
+}
+// font("/ttf/Vazir-Thin.ttf") format("truetype"); be in soorat estefade mishavad
