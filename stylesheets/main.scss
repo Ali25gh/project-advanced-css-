@@ -2,9 +2,8 @@
 
 @import "abstracts/variables", "abstracts/functions", "abstracts/mixins", "abstracts/placeholder";
 
-@import "base/base", "base/fonts", "base/helpers", "base/taypography";
+@import "base/base", "base/fonts", "base/helpers", "base/taypography" ,"base/animation";
 
-@import "components/_search";
+@import "components/search";
 
-@import "layout/nav", "layout/navbar";
-
+@import "layout/nav", "layout/navbar", "layout/header";

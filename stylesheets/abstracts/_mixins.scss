@@ -1,4 +1,4 @@
-@mixin flex($justify-content: false, $align-items: false, $wrap: false) {
+@mixin flex($justify-content: false, $align-items: false, $column: false, $wrap: false) {
     display: flex;
 
     @if ($justify-content) {
@@ -8,6 +8,9 @@
     @if ($align-items) {
         align-items: $align-items;
     }
+    @if ($column) {
+        flex-direction: column;
+    }
     @if ($wrap) {
         flex-wrap: $wrap;
     }
@@ -16,4 +19,3 @@
     width: $width + rem;
     height: $height + rem;
 }
-
