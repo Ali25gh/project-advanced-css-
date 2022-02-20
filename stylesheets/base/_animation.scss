@@ -15,10 +15,18 @@
     }
 }
 @keyframes rocket-moving {
-    0%{
+    0% {
         transform: translateY(0);
     }
-    50%{
+    50% {
         transform: translateY(-50px);
+    }
+}
+@keyframes burgermenu-color {
+    from {
+        background-color:lighten($color-orange1, 8%) ;
+    }
+    to {
+        background-color: $color-blue2  ;
     }
 }

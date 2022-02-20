@@ -1,0 +1,45 @@
+.btn {
+    position: relative;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 3px darken($color-gray1, 50%);
+    overflow: hidden;
+
+    transform: all 0.3s ease;
+    &__swipe {
+        background-color: $color-orange2;
+        & > span {
+            position: relative;
+            z-index: 1;
+            color: $color-white;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $color-orange3;
+            border-radius: 1rem;
+            transform: scale(0, 1);
+            transition: all 0.4s ease;
+            font-weight: normal;
+        }
+        &:hover {
+            &::after {
+                transform: scale(1, 1);
+            }
+        }
+    }
+}
+.shadow-none{
+    box-shadow: none;
+    text-shadow: none;
+}

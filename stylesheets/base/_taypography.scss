@@ -20,10 +20,21 @@
     border-left: 1.5rem solid $color-blue1;
     animation: typewriting 1.2s steps(18) 2s 1 normal forwards, typewriting-cursor 1s steps(1) infinite; // steps(18) yani ghdam be ghadam(dar inja18)
     // animation: name duration timing-function delay iteration-count direction fill-mode;
+    @media only screen and (max-width: 992px) {
+        font-size: 3.5rem;
+    }
+    @media only screen and (max-width: 768px) {
+        border-left: 1rem solid $color-blue1;
+    }
 }
 
 .header__subtitle{
     font-size: 2rem;
     line-height: 2;
     color: $color-gray4;
+    @media only screen and (max-width: 992px) {
+        font-size: 1.5rem;
+        
+    }
+
 }

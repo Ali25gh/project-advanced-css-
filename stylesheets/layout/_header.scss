@@ -34,14 +34,38 @@
         @include flex(center);
         width: 50%;
         height: 360px;
-        background: image("rocket-bg.png") no-repeat center bottom;// do kalame akhar mehvar aval x dovomi y
-        
+        background: image("rocket-bg.png") no-repeat center bottom; // do kalame akhar mehvar aval x dovomi y
     }
-    &__rocket{
+    &__rocket {
         background: image("rocket.png") no-repeat center bottom;
         width: 20%;
-        background-size: contain;// (contain) yani bedoon inke aks ro bekeshi kamel an ra dar fazayi ke darad namayesh bede
+        background-size: contain; // (contain) yani bedoon inke aks ro bekeshi kamel an ra dar fazayi ke darad namayesh bede
         animation: rocket-moving 4s infinite linear;
-        
     }
+    @media only screen and (max-width: 992px) {
+        height: 40rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 1rem 0;
+        &::after {
+            display: none;
+        }
+        &__h-tags {
+            align-items: center;
+            width: 100%;
+        }
+        &__banner {
+            flex-direction: column;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        &__rocket-bg {
+            width: 100%;
+        }
+        &__rocket {
+            width: 13%;
+        }
+    }
+
 }
