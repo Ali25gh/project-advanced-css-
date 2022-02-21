@@ -17,6 +17,10 @@ body {
   font-size: 1.5rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #262626;
+}
+
 button,
 textarea,
 select,
@@ -960,6 +964,66 @@ a:hover {
   }
   .header__rocket {
     width: 13%;
+  }
+}
+
+.features {
+  position: relative;
+  top: -50px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* in do ta ra neveshtim braye inke vasat ghrar begirad (bala) */
+  padding-right: 1rem;
+  padding-left: 1rem;
+  /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
+  /* (min-width)kamtar az:   (max-width)bishtar az: */
+}
+
+.features__box {
+  width: 30rem;
+  flex-grow: 1;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(69, 123, 157, 0.2);
+}
+
+.features__text {
+  padding: 1rem 2rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .features {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .features {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .features {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .features {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .features {
+    max-width: 1320px;
   }
 }
 /*# sourceMappingURL=main.css.map */

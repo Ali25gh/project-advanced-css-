@@ -1,1 +1,39 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+.features {
+  position: relative;
+  top: -50px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 992px) {
+  .features {
+    padding-top: 5rem;
+  }
+}
+
+.features__box {
+  width: 30rem;
+  flex-grow: 1;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(69, 123, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.features__box:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+.features__text {
+  padding: 1rem 2rem;
+}
+
+.features__text > h3 {
+  white-space: nowrap;
+}
+/*# sourceMappingURL=home.css.map */
