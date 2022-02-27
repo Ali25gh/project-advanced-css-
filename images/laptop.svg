@@ -1,12 +1,12 @@
 <svg version="1.1" id="laptop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="86.06px"
 	 height="59.69px" viewBox="0 0 86.06 59.69" style="enable-background:new 0 0 86.06 59.69;" xml:space="preserve">
 <style type="text/css">	
-	<!-- .st0, .st1, .st2{
+	.st0, .st1, .st2{
 		fill: #1d3557;
 		stroke:#1d3557;
 		stroke-linecap: round;
 		stroke-width:2;
-	} -->
+	}
 </style>
 <defs>
 </defs>
@@ -32,13 +32,13 @@
 </g>
 <path d="M11.11,7.12"/>
 <line id="topline" class="st0" x1="10.9" y1="8.3" x2="70.84" y2="8.3">
- 	<!-- <animate attributeName="x2" begin="laptop.mouseover" end="laptop.mouseout" keyTimes="0; .5; 1" values="70.84;10.9;70.84" dur="3.8s" repeatCount="indefinite"/> -->
+ 	<animate attributeName="x2" begin="laptop.mouseover" end="laptop.mouseout" keyTimes="0; .5; 1" values="70.84;10.9;70.84" dur="3.8s" repeatCount="indefinite"/>
 </line>
 <line id="centerline" class="st1" x1="10.9" y1="13.59" x2="33.77" y2="13.59">
-	<!-- <animate attributeName="x2" begin="laptop.mouseover" end="laptop.mouseout" keyTimes="0; .5; 1" values="33.59;10.9;33.59" dur="3.5s" repeatCount="indefinite" /> -->
+	<animate attributeName="x2" begin="laptop.mouseover" end="laptop.mouseout" keyTimes="0; .5; 1" values="33.59;10.9;33.59" dur="3.5s" repeatCount="indefinite" />
 </line>
 <line id="bottomline" class="st2" x1="10.9" y1="18.13" x2="51.34" y2="18.13">
-	<!-- <animate attributeName="x2" begin="laptop.mouseover" end="laptop.mouseout" keyTimes="0; .5; 1" values="51.34;10.9;51.34" dur="2s" repeatCount="indefinite"/> -->
+	<animate attributeName="x2" begin="laptop.mouseover" end="laptop.mouseout" keyTimes="0; .5; 1" values="51.34;10.9;51.34" dur="2s" repeatCount="indefinite"/>
 </line>
 </svg>
 

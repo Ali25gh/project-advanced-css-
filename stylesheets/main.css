@@ -138,6 +138,14 @@ a:hover {
   padding-bottom: 2rem;
 }
 
+.mt-50 {
+  margin-top: 5rem;
+}
+
+.mb-50 {
+  margin-bottom: 5rem;
+}
+
 .margin__r-auto {
   margin-right: auto;
 }
@@ -271,6 +279,54 @@ a:hover {
   }
   to {
     background-color: #2196f3;
+  }
+}
+
+@-webkit-keyframes stroke-offset {
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-offset {
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes success-scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes success-scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
   }
 }
 
@@ -505,6 +561,160 @@ a:hover {
 .shadow-none {
   box-shadow: none;
   text-shadow: none;
+}
+
+.success-icon {
+  width: 7rem;
+  height: 7rem;
+  fill: none;
+  stroke: #457b9d;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.success-icon:hover {
+  stroke-dasharray: 230;
+  stroke-dashoffset: 230;
+  -webkit-animation: stroke-offset 0.6s linear forwards, success-scale 0.2s ease 0.6s;
+          animation: stroke-offset 0.6s linear forwards, success-scale 0.2s ease 0.6s;
+}
+
+.world-icon {
+  width: 6.5rem;
+  height: 6.4rem;
+  fill: none;
+  stroke: #e76f51;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.world-icon .world-icon__world-marker {
+  transition: all 1s cubic-bezier(1, -1.61, 0, 1.74);
+}
+
+.world-icon:hover .world-icon__world-circle {
+  opacity: 0;
+  -webkit-animation: fade-in 0.6s linear forwards;
+          animation: fade-in 0.6s linear forwards;
+}
+
+.world-icon:hover .world-icon__world-map {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+}
+
+.world-icon:hover .world-icon__world-marker {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transform-origin: 49px 7px;
+          transform-origin: 49px 7px;
+}
+
+.world-icon:hover .world-icon__world-marker,
+.world-icon:hover .world-icon__world-map {
+  opacity: 0;
+  -webkit-animation: stroke-offset 0.6s linear forwards;
+          animation: stroke-offset 0.6s linear forwards;
+}
+
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course__box {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  margin: 2rem;
+  border: 2px solid #f1f1f1;
+  border-radius: 0.5rem;
+}
+
+.course__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.course__header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.19);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.course__header:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.course__header:hover .course__details-link {
+  left: 1.8rem;
+  opacity: 1;
+}
+
+.course__header:hover .course__social-media i {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.course__details-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  color: white;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.course__details-link:hover {
+  color: #cccccc;
+}
+
+.course__social-media {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+}
+
+.course__social-media i {
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  transition: all 0.3s linear;
+}
+
+.course__social-media i:hover {
+  color: #e76f51;
+}
+
+.course__social-media :nth-child(2) {
+  margin-right: auto;
+}
+
+.course__img {
+  display: block;
 }
 
 .nav__lists {
@@ -848,6 +1058,7 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 30;
+    background-color: white;
     box-shadow: 0 0 4px #444444;
   }
 }
@@ -973,14 +1184,12 @@ a:hover {
   z-index: 10;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  /* in do ta ra neveshtim braye inke vasat ghrar begirad (bala) */
-  padding-right: 1rem;
-  padding-left: 1rem;
-  /* in do ta ra neveshtim braye inke kami fasele begirad(az kenar) */
-  /* (min-width)kamtar az:   (max-width)bishtar az: */
+}
+
+@media only screen and (max-width: 992px) {
+  .features {
+    padding-top: 5rem;
+  }
 }
 
 .features__box {
@@ -988,42 +1197,23 @@ a:hover {
   flex-grow: 1;
   padding: 1rem 2rem;
   margin: 2rem;
+  text-align: center;
   border-radius: 1rem;
   background-color: white;
   box-shadow: 0 8px 16px 0 rgba(69, 123, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.features__box:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 .features__text {
   padding: 1rem 2rem;
 }
 
-@media only screen and (min-width: 576px) {
-  .features {
-    max-width: 540px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .features {
-    max-width: 720px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .features {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .features {
-    max-width: 1140px;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .features {
-    max-width: 1320px;
-  }
+.features__text > h3 {
+  white-space: nowrap;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,87 @@
+.course {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__box {
+        position: relative;
+        overflow: hidden;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 35rem;
+        margin: 2rem;
+        border: 2px solid $color-gray1;
+        border-radius: 0.5rem;
+    }
+
+    // header
+    &__header {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(black, 0.19);
+            transform: scale(0);
+            transition: all.3s ease-in-out;
+        }
+        &:hover {
+            &::after {
+                transform: scale(1);
+            }
+            & .course__details-link {
+                left: 1.8rem;
+                opacity: 1;
+            }
+            & .course__social-media i {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+    &__details-link {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1;
+        color: $color-white;
+        opacity: 0;
+        transition: all 0.2s ease-in;
+        &:hover {
+            color: $color-gray2;
+        }
+    }
+
+    &__social-media {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+
+        & i {
+            padding: 1rem;
+            color: $color-white;
+            font-size: 2rem;
+            opacity: 0;
+            transform: scale(1.7);
+            transition: all 0.3s linear;
+            &:hover {
+                color: $color-orange1;
+            }
+        }
+        & :nth-child(2){
+            margin-right: auto;
+        }
+    }
+    &__img{
+        display: block;
+    }
+}
