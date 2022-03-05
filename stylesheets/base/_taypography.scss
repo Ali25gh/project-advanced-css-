@@ -38,3 +38,21 @@
     }
 
 }
+.header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    font-family: "lalezar";
+    font-size: 2.5rem;
+    &::after,&::before{
+        content: "";
+        width: 20rem;
+        height: .2rem;
+        background-color: $color-orange1;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
