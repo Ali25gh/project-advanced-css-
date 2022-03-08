@@ -1649,36 +1649,84 @@ a:hover {
 
 @media only screen and (max-width: 992px) {
   .features {
-    padding-top: 5rem;
+    top: 0;
   }
 }
 
 .features__box {
-  width: 30rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  width: 30rem;
   padding: 1rem 2rem;
   margin: 2rem;
-  text-align: center;
   border-radius: 1rem;
   background-color: white;
+  text-align: center;
   -webkit-box-shadow: 0 8px 16px 0 rgba(69, 123, 157, 0.2);
           box-shadow: 0 8px 16px 0 rgba(69, 123, 157, 0.2);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .features__box:hover {
-  -webkit-transform: scale(1.06);
-          transform: scale(1.06);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .features__text {
   padding: 1rem 2rem;
 }
 
-.features__text > h3 {
-  white-space: nowrap;
+.plans {
+  position: relative;
+}
+
+.plans__cards {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .plans__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.plans__background {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 18rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(196, 136, 229, 0.5)), to(rgba(133, 185, 221, 0.5)));
+  background: linear-gradient(to right, rgba(196, 136, 229, 0.5), rgba(133, 185, 221, 0.5));
+}
+
+.plans__background::before, .plans__background::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/wave-plans.svg");
+  background-position-y: top;
+  background-size: 100% 100%;
+}
+
+.plans__background::after {
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
 }
 /*# sourceMappingURL=main.css.map */

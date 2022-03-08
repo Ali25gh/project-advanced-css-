@@ -1,0 +1,66 @@
+.features {
+    position: relative;
+    top: -50px;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 992px) {
+        top: 0;
+    }
+
+    &__box {        
+        flex-grow: 1;
+        width: 30rem;
+        padding: 1rem 2rem;
+        margin: 2rem;
+        border-radius: 1rem;
+        background-color: $color-white;
+        text-align: center;
+        box-shadow: 0 8px 16px 0 rgba($color-blue3, 0.2);
+        transition: all .3s ease;        
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__text {
+        padding: 1rem 2rem;
+    }
+}
+
+.plans {    
+    position: relative;
+
+    &__cards {
+        position: relative;
+        @include flex(center, center);
+
+        @media only screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 18rem;
+        background: linear-gradient(to right, rgba(196,136,229,0.5), rgba(133,185,221,0.5));        
+
+        &::before,&::after  {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100px;
+            background-image: image("wave-plans.svg");
+            background-position-y: top;
+            background-size: 100% 100%;
+        }
+
+        &::after {
+            transform: rotate(.5turn);
+        }
+    }
+}
