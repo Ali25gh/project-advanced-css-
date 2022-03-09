@@ -47,7 +47,7 @@
         transform: translateY(-50%);
         width: 100%;
         height: 18rem;
-        background: linear-gradient(to right, rgba(196,136,229,0.5), rgba(133,185,221,0.5));        
+        @include gradient($purple-gradient);
 
         &::before,&::after  {
             content: "";

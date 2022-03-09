@@ -1,0 +1,54 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 30rem;
+    @include flex(center, center, column);
+    box-shadow: -5px 5px 15px rgba($color-brown1, $alpha: 0.11);
+    background-color: $color-white;
+    border-radius: 1rem;
+    &:nth-child(2) {
+        margin: 0 1.5rem;
+    }
+    // card header
+    &__header {
+        width: 100%;
+        height: 15rem;
+        &--orange {
+            @include gradient($orange-gradient);
+        }
+        &--blue {
+            @include gradient($blue-gradient);
+        }
+        &--pink {
+            @include gradient($pink-gradient);
+        }
+    }
+    &__clouds {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        & > * {
+            position: absolute;
+            color: $color-white;
+            &:nth-child(1){
+                top: 38%;
+                right:69%;
+                font-size: 5rem;
+                opacity: .8;
+            }
+            &:nth-child(2){
+                top: 8%;
+                right: 41%;
+                font-size: 2rem;
+                opacity: .3;
+            }
+            &:nth-child(3){
+                top: 49%;
+                right: 10%;
+                font-size: 3rem;
+                opacity: .6;
+            }
+        }
+    }
+}

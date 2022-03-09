@@ -1076,6 +1076,83 @@ a:hover {
   text-align: center;
 }
 
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: -5px 5px 15px rgba(60, 72, 88, 0.11);
+          box-shadow: -5px 5px 15px rgba(60, 72, 88, 0.11);
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.card:nth-child(2) {
+  margin: 0 1.5rem;
+}
+
+.card__header {
+  width: 100%;
+  height: 15rem;
+}
+
+.card__header--orange {
+  background: linear-gradient(-45deg, #e26f4c 0%, #dcc185 100%);
+}
+
+.card__header--blue {
+  background: linear-gradient(-45deg, #85b9dd 0%, #bbd7e9 100%);
+}
+
+.card__header--pink {
+  background: linear-gradient(-45deg, #fd8ba6 0%, #bd88ec 100%);
+}
+
+.card__clouds {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.card__clouds > * {
+  position: absolute;
+  color: white;
+}
+
+.card__clouds > *:nth-child(1) {
+  top: 38%;
+  right: 69%;
+  font-size: 5rem;
+  opacity: .8;
+}
+
+.card__clouds > *:nth-child(2) {
+  top: 8%;
+  right: 41%;
+  font-size: 2rem;
+  opacity: .3;
+}
+
+.card__clouds > *:nth-child(3) {
+  top: 49%;
+  right: 10%;
+  font-size: 3rem;
+  opacity: .6;
+}
+
 .nav__lists {
   position: relative;
   display: -webkit-box;
