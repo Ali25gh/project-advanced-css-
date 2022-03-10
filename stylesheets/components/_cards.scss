@@ -31,24 +31,76 @@
         & > * {
             position: absolute;
             color: $color-white;
-            &:nth-child(1){
+            &:nth-child(1) {
                 top: 38%;
-                right:69%;
-                font-size: 5rem;
-                opacity: .8;
+                right: 69%;
+                font-size: 6.5rem;
+                opacity: 0.8;
             }
-            &:nth-child(2){
+            &:nth-child(2) {
                 top: 8%;
                 right: 41%;
-                font-size: 2rem;
-                opacity: .3;
+                font-size: 3rem;
+                opacity: 0.3;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
                 top: 49%;
                 right: 10%;
-                font-size: 3rem;
-                opacity: .6;
+                font-size: 4rem;
+                opacity: 0.6;
             }
         }
+    }
+    &__plan-box {
+        position: absolute;
+        top: 9rem;
+        @include flex(center, center);
+        @include box(7, 7);
+        z-index: 1;
+        background-color: $color-white;
+        border-radius: 50%;
+
+        overflow: hidden;
+        cursor: pointer;
+        border: 1px solid $color-gray1;
+    }
+    &__plane-title {
+        text-align: center;
+    }
+    &__content {
+        @include flex(center, center);
+        width: 100%;
+        margin: -3rem;
+        background-color: $color-white;
+        border: 2px solid $color-gray1;
+        border-top-right-radius: 2.5rem;
+        border-top-left-radius: 2.5rem;
+        border-bottom:2px solid rgba($color-gray3, 0.15) ;
+    }
+    &__lists {
+        margin: 0 6rem;
+        @include flex(space-around, center, column);
+        opacity: 0.7;
+    }
+    &__list {
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 1px solid rgba($color-gray3, 0.2);
+        &:last-child {
+            border-bottom:0;   
+        }
+        &--price {
+            font-size: 3rem;
+            margin: 4rem 0 0 0;
+            padding: 1rem;
+            border: 2px solid rgba($color-gray3, 0.4);
+            border-radius: 0.5rem;
+            background-color: rgba($color-gray3, 0.1);
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.53);
+        }
+    }
+    &__link{
+        margin: 4rem;
+        border-top: 1px solid rgba($color-gray3, 0.1);
     }
 }
