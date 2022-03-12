@@ -45,13 +45,6 @@
         transform: scale(1.1);
     }
 }
-
-@keyframes fade-in {
-    to{
-        opacity: 1;
-    }
-    
-}
 @keyframes wiggle {
     0%, 7% {
       transform: rotateZ(0);
@@ -75,3 +68,41 @@
       transform: rotateZ(0);
     }
   }
+  
+@keyframes fade-in {
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes fade-out {
+    to{
+        opacity: 0;
+    }
+    
+}
+@keyframes plane-flying {
+    20%{
+        transform: scale(.8) rotate3d(0,0,1,-60deg);
+        opacity: .8;
+    }
+    40%{
+        transform: scale(.7) rotate3d(1,1,1,-80deg);
+    }
+    60%{
+        transform: scale(.5) rotate3d(1,1,1,-90deg);
+    }
+    100%{
+        top: 0;
+        right: 1rem;
+        transform: scale(0) rotate3d(1,1,1,-110deg);
+    }
+}
+@keyframes clouds-right-left {
+    from{
+        transform: translateX(6px);
+    }
+    to{
+        transform: translateX(-6px);
+    }
+}

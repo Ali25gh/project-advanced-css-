@@ -362,18 +362,6 @@ a:hover {
   }
 }
 
-@-webkit-keyframes fade-in {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  to {
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes wiggle {
   0%, 7% {
     -webkit-transform: rotateZ(0);
@@ -433,6 +421,96 @@ a:hover {
   40%, 100% {
     -webkit-transform: rotateZ(0);
             transform: rotateZ(0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes plane-flying {
+  20% {
+    -webkit-transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
+            transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
+    opacity: .8;
+  }
+  40% {
+    -webkit-transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
+            transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
+  }
+  60% {
+    -webkit-transform: scale(0.5) rotate3d(1, 1, 1, -90deg);
+            transform: scale(0.5) rotate3d(1, 1, 1, -90deg);
+  }
+  100% {
+    top: 0;
+    right: 1rem;
+    -webkit-transform: scale(0) rotate3d(1, 1, 1, -110deg);
+            transform: scale(0) rotate3d(1, 1, 1, -110deg);
+  }
+}
+
+@keyframes plane-flying {
+  20% {
+    -webkit-transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
+            transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
+    opacity: .8;
+  }
+  40% {
+    -webkit-transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
+            transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
+  }
+  60% {
+    -webkit-transform: scale(0.5) rotate3d(1, 1, 1, -90deg);
+            transform: scale(0.5) rotate3d(1, 1, 1, -90deg);
+  }
+  100% {
+    top: 0;
+    right: 1rem;
+    -webkit-transform: scale(0) rotate3d(1, 1, 1, -110deg);
+            transform: scale(0) rotate3d(1, 1, 1, -110deg);
+  }
+}
+
+@-webkit-keyframes clouds-right-left {
+  from {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  to {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+}
+
+@keyframes clouds-right-left {
+  from {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  to {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
   }
 }
 
@@ -1238,6 +1316,57 @@ a:hover {
 .card__link {
   margin: 4rem;
   border-top: 1px solid rgba(68, 68, 68, 0.1);
+}
+
+.card__plane {
+  position: absolute;
+  z-index: 2;
+  top: 11rem;
+  right: 44%;
+  font-size: 3rem;
+  color: #457b9d;
+  -webkit-transform: rotate3d(0, 0, 1, -90deg);
+          transform: rotate3d(0, 0, 1, -90deg);
+  opacity: 0;
+}
+
+.card__rocket {
+  position: absolute;
+  z-index: 2;
+  top: 11rem;
+  right: 44%;
+  font-size: 3rem;
+  color: #457b9d;
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
+  opacity: 0;
+}
+
+.card__paper-plane {
+  position: absolute;
+  z-index: 2;
+  top: 11rem;
+  left: 45%;
+  font-size: 3rem;
+  color: #457b9d;
+  opacity: 0;
+}
+
+.card:hover .card__plane-title {
+  opacity: 0;
+  -webkit-animation: fade-in 5s ease forwards;
+          animation: fade-in 5s ease forwards;
+}
+
+.card:hover .card__plane {
+  opacity: 1;
+  -webkit-animation: plane-flying 2s ease 0.3s forwards;
+          animation: plane-flying 2s ease 0.3s forwards;
+}
+
+.card:hover .card__clouds--plane {
+  -webkit-animation: clouds-right-left 1s linear alternate 3.5;
+          animation: clouds-right-left 1s linear alternate 3.5;
 }
 
 .nav__lists {
