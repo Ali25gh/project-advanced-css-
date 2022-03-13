@@ -847,7 +847,7 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 39rem;
+  width: 41rem;
   margin: 2rem;
   border: 2px solid #f1f1f1;
   border-radius: 0.5rem;
@@ -940,7 +940,7 @@ a:hover {
 
 .course__img {
   display: block;
-  width: 39rem;
+  width: 41rem;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
 }
@@ -1081,18 +1081,33 @@ a:hover {
 }
 
 .course__price {
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #cccccc;
 }
 
 .course__result {
-  padding: .5rem;
-  margin: .2rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
+}
+
+.course__result1 {
+  font-family: "vazir";
+  color: goldenrod;
 }
 
 .course__user {
+  position: absolute;
+  top: 45.75rem;
+  left: 20rem;
   color: #08528d;
+}
+
+@media only screen and (max-width: 576px) {
+  .course__user {
+    top: 58.8rem;
+    left: 15.6rem;
+  }
 }
 
 .course__stars {
@@ -1106,16 +1121,34 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   direction: ltr;
+  border: none;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .course__star {
-  color: goldenrod;
+  color: gold;
   cursor: pointer;
   font-size: 2rem;
 }
 
 .course__star:hover ~ .course__star {
   color: #cccccc;
+}
+
+.course__star1 {
+  position: absolute;
+  top: 45.6rem;
+  right: 24.7rem;
+  color: goldenrod;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .course__star1 {
+    display: none;
+  }
 }
 
 .course__ribbon {
@@ -1144,12 +1177,12 @@ a:hover {
   top: 0;
   width: 100%;
   z-index: 2;
-  padding: .6rem 0;
+  padding: 0.6rem 0;
   background-color: #e76f51;
   color: white;
   -webkit-box-shadow: 0 0 8px rgba(153, 153, 153, 0.1);
           box-shadow: 0 0 8px rgba(153, 153, 153, 0.1);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border-bottom-right-radius: 0;
   text-align: center;
 }

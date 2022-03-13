@@ -8,7 +8,7 @@
         flex: 0 0 auto;
         display: flex;
         flex-direction: column;
-        width: 39rem;
+        width: 41rem;
         margin: 2rem;
         border: 2px solid $color-gray1;
         border-radius: 0.5rem;
@@ -25,7 +25,7 @@
         &::after {
             content: "";
             position: absolute;
-            
+
             top: 0;
             right: 0;
             left: 0;
@@ -85,7 +85,7 @@
     }
     &__img {
         display: block;
-        width: 39rem;
+        width: 41rem;
         border-top-right-radius: 0.5rem;
         border-top-left-radius: 0.5rem;
     }
@@ -119,7 +119,7 @@
         white-space: nowrap;
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
-        &:hover{
+        &:hover {
             animation: wiggle 2.2s linear forwards;
             border: none;
         }
@@ -169,7 +169,7 @@
             border-right-color: $color-orange1;
         }
     }
-    &__footer{
+    &__footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -179,34 +179,57 @@
             flex-direction: column;
         }
     }
-    &__price{
-        padding: .5rem;
-        border-radius: .5rem;
+    &__price {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
         background-color: $color-gray2;
     }
-    &__result{
-        padding: .5rem;
-        margin: .2rem;
+    &__result {
+        padding: 0.5rem;
+        margin: 0.2rem;
     }
-    &__user{
-        color: darken($color-blue2, 25%) ;
+    &__result1 {
+        font-family: "vazir";
+        color: goldenrod;
     }
-    &__stars{
+    &__user {
+        position: absolute;
+        top: 45.75rem;
+        left: 20rem;
+        color: darken($color-blue2, 25%);
+        @media only screen and (max-width: 576px) {
+            top: 58.8rem;
+            left: 15.6rem;
+        }
+    }
+    &__stars {
         display: flex;
         justify-content: center;
         align-items: center;
         direction: ltr;
+        border: none;
+        order: 3;
     }
-    &__star{
-        color: $color-gold;
+    &__star {
+        color: $color-gold2;
         cursor: pointer;
         font-size: 2rem;
-        &:hover ~ .course__star{
+        &:hover ~ .course__star {
             color: $color-gray2;
         }
     }
+    &__star1 {
+        position: absolute;
+        top: 45.6rem;
+        right: 24.7rem;
+        color: goldenrod;
+        font-size: 2rem;
+        @media only screen and (max-width: 576px) {
+            display: none;
+        }
+    }
     //riboon
-    &__ribbon{
+    &__ribbon {
         position: absolute;
         top: 1.5rem;
         right: -1rem;
@@ -215,26 +238,26 @@
         overflow: hidden;
         pointer-events: none;
         z-index: 1;
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             top: 3.5rem;
             right: 0;
-            border: .5rem solid $color-orange1;
+            border: 0.5rem solid $color-orange1;
             border-bottom-color: transparent;
             border-right-color: transparent;
         }
     }
-    &__ribbon-text{
+    &__ribbon-text {
         position: absolute;
         top: 0;
         width: 100%;
         z-index: 2;
-        padding: .6rem 0;
+        padding: 0.6rem 0;
         background-color: $color-orange1;
         color: $color-white;
-        box-shadow: 0 0 8px rgba($color-gray4, .1);
-        border-radius: .5rem;
+        box-shadow: 0 0 8px rgba($color-gray4, 0.1);
+        border-radius: 0.5rem;
         border-bottom-right-radius: 0;
         text-align: center;
     }
