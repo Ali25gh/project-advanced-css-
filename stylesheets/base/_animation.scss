@@ -24,86 +24,132 @@
 }
 @keyframes burgermenu-color {
     from {
-        background-color:lighten($color-orange1, 8%) ;
+        background-color: lighten($color-orange1, 8%);
     }
     to {
-        background-color: $color-blue2  ;
+        background-color: $color-blue2;
     }
 }
 
-@keyframes stroke-offset{
-    to{
+@keyframes stroke-offset {
+    to {
         opacity: 1;
         stroke-dashoffset: 0;
     }
 }
 @keyframes success-scale {
-    0%{
+    0% {
         transform: scale(1);
     }
-    50%{
+    50% {
         transform: scale(1.1);
     }
 }
 @keyframes wiggle {
-    0%, 7% {
-      transform: rotateZ(0);
+    0%,
+    7% {
+        transform: rotateZ(0);
     }
     15% {
-      transform: rotateZ(-15deg);
+        transform: rotateZ(-15deg);
     }
     20% {
-      transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
     }
     25% {
-      transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
     }
     30% {
-      transform: rotateZ(6deg);
+        transform: rotateZ(6deg);
     }
     35% {
-      transform: rotateZ(-4deg);
+        transform: rotateZ(-4deg);
     }
-    40%, 100% {
-      transform: rotateZ(0);
+    40%,
+    100% {
+        transform: rotateZ(0);
     }
-  }
-  
+}
+
 @keyframes fade-in {
-    to{
+    to {
         opacity: 1;
     }
-    
 }
 @keyframes fade-out {
-    to{
+    to {
         opacity: 0;
-        
     }
-    
 }
+// plane
+
 @keyframes plane-flying {
-    20%{
-        transform: scale(.8) rotate3d(0,0,1,-60deg);
-        opacity: .8;
+    20% {
+        transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
+        opacity: 0.8;
     }
-    40%{
-        transform: scale(.7) rotate3d(1,1,1,-80deg);
+    40% {
+        transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
     }
-    60%{
-        transform: scale(.5) rotate3d(1,1,1,-90deg);
+    60% {
+        transform: scale(0.5) rotate3d(1, 1, 1, -90deg);
     }
-    100%{
+    100% {
         top: 0;
         right: 1rem;
-        transform: scale(0) rotate3d(1,1,1,-110deg);
+        transform: scale(0) rotate3d(1, 1, 1, -110deg);
     }
 }
 @keyframes clouds-right-left {
-    from{
+    from {
         transform: translateX(6px);
     }
-    to{
+    to {
         transform: translateX(-6px);
+    }
+}
+//rocket
+
+@keyframes rocket-lunch {
+    to {
+        top: 4.3rem;
+        right: 8rem;
+        transform: rotate(-70deg);
+    }
+}
+@keyframes rocket-transform {
+    0% {
+        right: 8rem;
+        transform: rotate(-70deg);
+    }
+    33% {
+        transform: rotate(-70deg);
+    }
+    66%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        right: 18rem;
+        transform: rotate(-20deg);
+    }
+}
+@keyframes rocket-flying {
+    from {
+        transform: scale(0.95) rotate3d(0, 0, 1, -7deg);
+        
+    }
+    to {
+        top: -4rem;
+        right: 1rem;
+        transform: scale(0) rotate3d(0, 0, 1, -35deg);
+        opacity: 0.9;
+    }
+}
+@keyframes clouds-to-bottm {
+    from {
+        transform: translateY(-94%);
+    }
+    to {
+        transform: translateY(83%);
     }
 }

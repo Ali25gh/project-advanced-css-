@@ -363,7 +363,8 @@ a:hover {
 }
 
 @-webkit-keyframes wiggle {
-  0%, 7% {
+  0%,
+  7% {
     -webkit-transform: rotateZ(0);
             transform: rotateZ(0);
   }
@@ -387,14 +388,16 @@ a:hover {
     -webkit-transform: rotateZ(-4deg);
             transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     -webkit-transform: rotateZ(0);
             transform: rotateZ(0);
   }
 }
 
 @keyframes wiggle {
-  0%, 7% {
+  0%,
+  7% {
     -webkit-transform: rotateZ(0);
             transform: rotateZ(0);
   }
@@ -418,7 +421,8 @@ a:hover {
     -webkit-transform: rotateZ(-4deg);
             transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     -webkit-transform: rotateZ(0);
             transform: rotateZ(0);
   }
@@ -452,7 +456,7 @@ a:hover {
   20% {
     -webkit-transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
             transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
-    opacity: .8;
+    opacity: 0.8;
   }
   40% {
     -webkit-transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
@@ -474,7 +478,7 @@ a:hover {
   20% {
     -webkit-transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
             transform: scale(0.8) rotate3d(0, 0, 1, -60deg);
-    opacity: .8;
+    opacity: 0.8;
   }
   40% {
     -webkit-transform: scale(0.7) rotate3d(1, 1, 1, -80deg);
@@ -511,6 +515,116 @@ a:hover {
   to {
     -webkit-transform: translateX(-6px);
             transform: translateX(-6px);
+  }
+}
+
+@-webkit-keyframes rocket-lunch {
+  to {
+    top: 4.3rem;
+    right: 8rem;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+}
+
+@keyframes rocket-lunch {
+  to {
+    top: 4.3rem;
+    right: 8rem;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+}
+
+@-webkit-keyframes rocket-transform {
+  0% {
+    right: 8rem;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+  33% {
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+  66% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    right: 18rem;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@keyframes rocket-transform {
+  0% {
+    right: 8rem;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+  33% {
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+  }
+  66% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    right: 18rem;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@-webkit-keyframes rocket-flying {
+  from {
+    -webkit-transform: scale(0.95) rotate3d(0, 0, 1, -7deg);
+            transform: scale(0.95) rotate3d(0, 0, 1, -7deg);
+  }
+  to {
+    top: -4rem;
+    right: 1rem;
+    -webkit-transform: scale(0) rotate3d(0, 0, 1, -35deg);
+            transform: scale(0) rotate3d(0, 0, 1, -35deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes rocket-flying {
+  from {
+    -webkit-transform: scale(0.95) rotate3d(0, 0, 1, -7deg);
+            transform: scale(0.95) rotate3d(0, 0, 1, -7deg);
+  }
+  to {
+    top: -4rem;
+    right: 1rem;
+    -webkit-transform: scale(0) rotate3d(0, 0, 1, -35deg);
+            transform: scale(0) rotate3d(0, 0, 1, -35deg);
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes clouds-to-bottm {
+  from {
+    -webkit-transform: translateY(-94%);
+            transform: translateY(-94%);
+  }
+  to {
+    -webkit-transform: translateY(83%);
+            transform: translateY(83%);
+  }
+}
+
+@keyframes clouds-to-bottm {
+  from {
+    -webkit-transform: translateY(-94%);
+            transform: translateY(-94%);
+  }
+  to {
+    -webkit-transform: translateY(83%);
+            transform: translateY(83%);
   }
 }
 
@@ -1397,9 +1511,20 @@ a:hover {
           animation: plane-flying 2s ease 0.3s forwards;
 }
 
+.card:hover .card__rocket {
+  opacity: 1;
+  -webkit-animation: rocket-lunch 0.5s ease-in 0.5s forwards, rocket-transform 1s linear 1.55s alternate forwards, rocket-flying 3s cubic-bezier(0.75, -0.29, 0, 0.97) 2.9s forwards;
+          animation: rocket-lunch 0.5s ease-in 0.5s forwards, rocket-transform 1s linear 1.55s alternate forwards, rocket-flying 3s cubic-bezier(0.75, -0.29, 0, 0.97) 2.9s forwards;
+}
+
 .card:hover .card__clouds--plane {
   -webkit-animation: clouds-right-left 1s linear alternate 3.5;
           animation: clouds-right-left 1s linear alternate 3.5;
+}
+
+.card:hover .card__clouds--rocket {
+  -webkit-animation: clouds-to-bottm 1.9s .5s linear 2.55;
+          animation: clouds-to-bottm 1.9s .5s linear 2.55;
 }
 
 .nav__lists {
