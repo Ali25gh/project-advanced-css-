@@ -628,6 +628,36 @@ a:hover {
   }
 }
 
+@-webkit-keyframes paper-plane-flying {
+  25% {
+    top: 6rem;
+    left: 16rem;
+    -webkit-transform: rotateZ(-60deg);
+            transform: rotateZ(-60deg);
+  }
+  100% {
+    top: -1rem;
+    left: -4rem;
+    -webkit-transform: rotateZ(-90deg);
+            transform: rotateZ(-90deg);
+  }
+}
+
+@keyframes paper-plane-flying {
+  25% {
+    top: 6rem;
+    left: 16rem;
+    -webkit-transform: rotateZ(-60deg);
+            transform: rotateZ(-60deg);
+  }
+  100% {
+    top: -1rem;
+    left: -4rem;
+    -webkit-transform: rotateZ(-90deg);
+            transform: rotateZ(-90deg);
+  }
+}
+
 .search {
   position: relative;
   display: -webkit-box;
@@ -1328,6 +1358,12 @@ a:hover {
   margin: 0 1.5rem;
 }
 
+@media only screen and (max-width: 992px) {
+  .card:nth-child(2) {
+    margin: 2rem 0;
+  }
+}
+
 .card__header {
   width: 100%;
   height: 15rem;
@@ -1517,14 +1553,20 @@ a:hover {
           animation: rocket-lunch 0.5s ease-in 0.5s forwards, rocket-transform 1s linear 1.55s alternate forwards, rocket-flying 3s cubic-bezier(0.75, -0.29, 0, 0.97) 2.9s forwards;
 }
 
+.card:hover .card__paper-plane {
+  opacity: 1;
+  -webkit-animation: paper-plane-flying 2s 0.5s forwards ease-out;
+          animation: paper-plane-flying 2s 0.5s forwards ease-out;
+}
+
 .card:hover .card__clouds--plane {
   -webkit-animation: clouds-right-left 1s linear alternate 3.5;
           animation: clouds-right-left 1s linear alternate 3.5;
 }
 
 .card:hover .card__clouds--rocket {
-  -webkit-animation: clouds-to-bottm 1.9s .5s linear 2.55;
-          animation: clouds-to-bottm 1.9s .5s linear 2.55;
+  -webkit-animation: clouds-to-bottm 1.9s 0.5s linear 2.55;
+          animation: clouds-to-bottm 1.9s 0.5s linear 2.55;
 }
 
 .nav__lists {

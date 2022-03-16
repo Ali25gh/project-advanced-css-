@@ -153,3 +153,15 @@
         transform: translateY(83%);
     }
 }
+@keyframes paper-plane-flying {
+    25%{
+        top: 6rem;
+        left: 16rem;
+        transform: rotateZ(-60deg);
+    }
+    100%{
+        top: -1rem;
+        left: -4rem;
+        transform: rotateZ(-90deg);
+    }
+}

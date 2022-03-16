@@ -9,6 +9,12 @@
     &:nth-child(2) {
         margin: 0 1.5rem;
     }
+    @media only screen and (max-width: 992px) {
+        &:nth-child(2) {
+            margin: 2rem 0;
+        }
+    }
+
     // card header
     &__header {
         width: 100%;
@@ -146,14 +152,19 @@
         }
         & .card__rocket {
             opacity: 1;
-            animation: rocket-lunch .5s ease-in .5s  forwards ,rocket-transform 1s linear 1.55s alternate forwards, rocket-flying 3s cubic-bezier(0.75,-0.29, 0, 0.97) 2.9s forwards;
+            animation: rocket-lunch 0.5s ease-in 0.5s forwards, rocket-transform 1s linear 1.55s alternate forwards,
+                rocket-flying 3s cubic-bezier(0.75, -0.29, 0, 0.97) 2.9s forwards;
+        }
+        & .card__paper-plane {
+            opacity: 1;
+            animation: paper-plane-flying 2s 0.5s forwards ease-out;
         }
         & .card__clouds {
             &--plane {
                 animation: clouds-right-left 1s linear alternate 3.5; // alternate yani boro bargard adad akhar ham tedad ejra ast
             }
-            &--rocket{
-                animation: clouds-to-bottm 1.9s .5s linear 2.55;
+            &--rocket {
+                animation: clouds-to-bottm 1.9s 0.5s linear 2.55;
             }
         }
     }
