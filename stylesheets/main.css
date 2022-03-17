@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: Verdana, "vazir", "lalezar", Tahoma, sans-serif;
+  font-family: Verdana, "vazir", "lalezar", "Font Awesome 5 Free", Tahoma, sans-serif;
   font-size: 1.5rem;
 }
 
@@ -901,6 +901,63 @@ a:hover {
 .btn__swipe:hover::after {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
+}
+
+.btn__shape {
+  color: white;
+  padding: 1.2rem 2rem 1.2rem 4rem;
+}
+
+.btn__shape--pink {
+  background-color: #c088e9;
+}
+
+.btn__shape--blue {
+  background-color: #457b9d;
+}
+
+.btn__shape--orange {
+  background-color: #e76f51;
+}
+
+.btn__shape::before {
+  content: "\f3c1";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  -webkit-transform: rotateY(-0.5turn);
+          transform: rotateY(-0.5turn);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 0;
+}
+
+.btn__shape::after {
+  content: "\f023";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 1;
+}
+
+.btn__shape:hover {
+  color: #f1f1f1;
+}
+
+.btn__shape:hover::after {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  opacity: 0;
+}
+
+.btn__shape:hover::before {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
 }
 
 .shadow-none {
