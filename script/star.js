@@ -1,11 +1,10 @@
-"use strict";
 
-var stars_css = document.getElementById("a");
-var stars_flex = document.getElementById("b");
-var stars_sass = document.getElementById("c");
-var star_number = document.getElementById("star_number");
-var course_star1 = document.getElementById("course_star1");
-var defaul = 0
+let stars_css = document.getElementById("a");
+let stars_flex = document.getElementById("b");
+let stars_sass = document.getElementById("c");
+let star_number = document.getElementById("star_number");
+let course_star1 = document.getElementById("course_star1");
+const defaul = 0
 // css course
 function star1() {
     stars_css.style.display = "none";
@@ -35,8 +34,8 @@ function star_a5() {
     star_number.innerHTML = "(" + (defaul + 5) + ")"
 }
 // flex course
-var star_number1 = document.getElementById("star_number1");
-var course_star2 = document.getElementById("course_star2");
+let star_number1 = document.getElementById("star_number1");
+let course_star2 = document.getElementById("course_star2");
 function star2() {
     stars_flex.style.display = "none";
     stars_flex.style.display = "block";
@@ -65,8 +64,8 @@ function star_b5() {
     star_number1.innerHTML = "(" + (defaul + 5) + ")"
 }
 // sass course
-var star_number2 = document.getElementById("star_number2");
-var course_star3 = document.getElementById("course_star3");
+let star_number2 = document.getElementById("star_number2");
+let course_star3 = document.getElementById("course_star3");
 function star3() {
     stars_sass.style.display = "none";
     stars_sass.style.display = "block";
