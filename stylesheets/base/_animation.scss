@@ -165,3 +165,19 @@
         transform: rotateZ(-90deg);
     }
 }
+//video-mask
+@keyframes video-mask {
+    0%{
+        stroke-dasharray: 0;
+    }
+    100%{
+        stroke-dasharray: 9;
+    }
+}
+//play-wave
+@keyframes play-wave {
+    to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}

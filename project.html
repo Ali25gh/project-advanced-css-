@@ -355,7 +355,7 @@
                             ۲۰۰
                         </span>
                         <i class="course__user fas fa-user"></i>
-                        <i id="course_star2"  class="course__star1 fas fa-splotch"></i>
+                        <i id="course_star2" class="course__star1 fas fa-splotch"></i>
                         <span id="star_number1" class="course__result1">
                             (0)
                         </span>
@@ -511,7 +511,45 @@
             </div>
         </div>
     </div>
+    <div class="about">
+        <h1>درباره ما</h1>
+        <p>آخرین ویدیویی که در سایت بارگذاری شده را ببینید</p>
+        <div class="container">
+            <div class="about__boxes">
+                <div class="about__video-box">
+                    <div class="video"><a href="#" class="reple-play-button"><i class="fas fa-play"></i></a>
+                        <video class="video__video-bg" autoplay muted loop>
+                            <source type="video/mp4" src="videos/programming.mp4">
+                            <source type="video/webm" src="videos/programming-1.webm">
+
+                        </video>
+                        <svg class="video__svg" width="500px" height="500px" viewBox="0 0 500 500">
+                            <mask id="masking">
+                                <rect x="0" y="0" fill="white" width="100%" height="100%"></rect>
+                                <path fill="black" class="st2" d="M103.1,70.2c-10.2,11.7-17.8,25.9-21.2,42.3c-8.5,40.6,10.9,81.9,3.4,123.1c-5.7,31.7-15.2,62.6-27.1,92.5
+c-10.8,27.1-26.4,56.4-20,86.5c6.3,29.4,31.1,45.2,56.5,49.1c16.1,2.4,33.5-0.6,49.5-2.3c18.4-2,36.8-4.7,55.1-7.8
+c23.8-4,47.5-8.7,71.1-14.1c4.6-1,9.2-2.1,13.8-3.2c31.3-7.4,63.6-16.4,90.4-36.8c58.9-44.7,92.1-117.8,89.6-191.4
+c-1.2-36.3-11.9-73.8-37.2-99.9c-16-16.5-36.9-27.6-58.7-34.9c-26.2-8.8-54.2-13.2-81-19.5c-30.1-7.1-60.4-13.1-90.9-18.1
+C163.5,30.3,126.5,43.5,103.1,70.2z"></path>
+                            </mask>
+
+                            <rect mask="url(#masking)" fill="#fffaf3" width="100%" height="100%"></rect>
+
+                            <path mask="url(#masking)" fill="#fffaf3" class="video__st1"
+                                d="M88.3,52.4c-14.8,17-24.4,38-24.9,60.6c-0.4,15.3,2.3,30.5,4,45.6c3.2,27.1,3.7,54.7-0.3,81.7
+c-4,26.6-13.7,52.2-21.7,77.8C34.6,353,9.2,392,17.3,430.2c6.9,32.3,34.1,49.6,61.8,53.9c17.6,2.7,36.6-0.6,54.2-2.5
+c20.2-2.2,40.2-5.2,60.3-8.6c31.1-5.3,62.1-11.6,92.9-18.9c34.3-8.2,69.6-18,98.9-40.4c73.1-55.7,108.4-156.8,90.9-246.3
+c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-169-37.2C154.4,8.6,113.8,23.1,88.3,52.4z"></path>
+
+                            <circle class="video__st0" cx="38" cy="38" r="30.3"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="script/star.js"></script>
+
 </html>

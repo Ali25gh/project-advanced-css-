@@ -63,4 +63,19 @@
             transform: rotate(.5turn);
         }
     }
+
+}
+.about{
+    padding: 8rem 0;
+    background-color: #fffaf3;
+    clip-path: polygon(50% 7%, 91% 7%, 92% 91%, 31% 92%, 2% 94%, 4% 6%);
+    text-align: center;
+    &__boxes{
+        @include flex(space-evenly, center);
+
+        @media only screen and (max-width: 992px) {
+            flex-direction: column;
+            padding: 0 9rem;
+        }
+    }
 }
