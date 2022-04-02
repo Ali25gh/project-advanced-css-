@@ -181,3 +181,20 @@
         opacity: 0;
     }
 }
+//accordion
+@keyframes accordion-text-move {
+    from{
+        top: -100px;
+    }
+    to{
+        top: 0;
+    }
+}
+@keyframes accordion-text-move-out {
+    from{
+        top: 0;
+    }
+    to{
+        top: 100px;
+    }
+}
