@@ -273,12 +273,13 @@
         &__burger-checkbox:checked {
             & ~ .nav__mobaile-wrap {
                 display: block;
+                animation: move-right-to-left .7s  ease;
+                transition: translate 4s ease;
             }
 
             & ~ .nav__burger-label :nth-child(1) {
                 width: 50%;
                 transform-origin: bottom;
-    
                 transform: rotate(45deg) translate(-1rem, 1.6rem);
             }
     
@@ -292,7 +293,6 @@
             }
 
         }
-
         &__link {
             width: calc(100vw - 3rem);
         }
@@ -302,7 +302,6 @@
         }
 
         &__list:not(:last-child)
-    
         // not(:last-child) migooyim agar nabood be akharin child style ra bede
          {
             border-bottom: 1px solid #ccc;

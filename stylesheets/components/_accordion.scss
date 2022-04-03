@@ -10,9 +10,12 @@
         font-weight: bold;
         cursor: pointer;
         user-select: none;
+        white-space: nowrap;
     }
-    &__span {
-        margin-left: 33rem;
+    &__span{
+        @media only screen and (max-width: 576px) {
+            padding-left: 1rem;
+        }
     }
     &__angle-icon{
         transition: all 0.6s ease;

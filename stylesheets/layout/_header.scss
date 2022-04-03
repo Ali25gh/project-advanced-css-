@@ -58,8 +58,6 @@
         &__banner {
             flex-direction: column;
         }
-    }
-    @media only screen and (max-width: 576px) {
         &__rocket-bg {
             width: 100%;
         }
@@ -67,5 +65,6 @@
             width: 13%;
         }
     }
+
 
 }
