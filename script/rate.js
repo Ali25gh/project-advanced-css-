@@ -5,6 +5,9 @@ let stars_sass = document.getElementById("c");
 let star_number = document.getElementById("star_number");
 let course_star1 = document.getElementById("course_star1");
 const defaul = 0
+let votesas = document.getElementById("vote1");
+let voteflex = document.getElementById("vote2");
+let votecss = document.getElementById("vote3");
 // css course
 function star1() {
     stars_css.style.display = "none";
@@ -17,6 +20,14 @@ function star1() {
     course_star1.style.transition = "all 1s cubic-bezier(0.07, 0.94, 0.95, 0.05)";
     star_number.style.transition = "all 1s cubic-bezier(0, 2, 0, 1.54)";
     stars_css.innerHTML = "ممنون از نظرتون";
+    return hi()
+    function hi() {
+        for (let i = 0; i < 1000; i++) {
+            let vote0 = votecss.innerHTML = defaul
+            let voteplus = vote0 + 1;
+            votecss.innerHTML = voteplus;
+        }
+    }
 }
 function star_a1() {
     star_number.innerHTML = "(" + (defaul + 1) + ")"
@@ -47,6 +58,14 @@ function star2() {
     course_star2.style.transition = "all 1s cubic-bezier(0.07, 0.94, 0.95, 0.05)";
     star_number1.style.transition = "all 1s cubic-bezier(0, 2, 0, 1.54)";
     stars_flex.innerHTML = "ممنون از نظرتون";
+    return hi1()
+    function hi1() {
+        for (let i = 0; i < 1000; i++) {
+            let vote0 = voteflex.innerHTML = defaul
+            let voteplus = vote0 + 1;
+            voteflex.innerHTML = voteplus;
+        }
+    }
 }
 function star_b1() {
     star_number1.innerHTML = "(" + (defaul + 1) + ")"
@@ -77,6 +96,14 @@ function star3() {
     course_star3.style.transition = "all 1s cubic-bezier(0.07, 0.94, 0.95, 0.05)";
     star_number2.style.transition = "all 1s cubic-bezier(0, 2, 0, 1.54)";
     stars_sass.innerHTML = "ممنون از نظرتون";
+    return hi2()
+    function hi2() {
+        for (let i = 0; i < 1000; i++) {
+            let vote0 = votesas.innerHTML = defaul
+            let voteplus = vote0 + 1;
+            votesas.innerHTML = voteplus;
+        }
+    }
 }
 function star_c1() {
     star_number2.innerHTML = "(" + (defaul + 1) + ")"
@@ -93,3 +120,69 @@ function star_c4() {
 function star_c5() {
     star_number2.innerHTML = "(" + (defaul + 5) + ")"
 }
+// js-text for rate users click
+let jstextbefore = document.getElementById("js-text-before");
+let jstext1_css = document.getElementById("js-text");
+let jstextbefore2 = document.getElementById("js-text-before2");
+let jstext2_flex = document.getElementById("js-text2");
+let jstextbefore3 = document.getElementById("js-text-before3");
+let jstext3_sas = document.getElementById("js-text3");
+function jstext() {
+    jstextbefore.style.display = "block";
+    jstext1_css.style.display = "block";
+    jstext1_css.innerHTML=+votecss.innerHTML+"  نفر رای داده اند "
+    setTimeout(() => {
+        jstextbefore.style.display = "none";
+        jstext1_css.style.display = "none";
+    }, 3000)
+    if (votecss.innerHTML==0) {
+        jstext1_css.innerHTML="تو اولین باش, هنوز کسی رای نداده"
+        jstext1_css.style.height=("4rem")
+    }
+    else{
+        jstext1_css.style.height=("2rem")
+    }
+    if (votecss.innerHTML==1) {
+        jstext1_css.innerHTML="فقط یک نفر رای داده است"
+    }
+}
+function jstext2() {
+    jstextbefore2.style.display = "block";
+    jstext2_flex.style.display = "block";
+    jstext2_flex.innerHTML=+voteflex.innerHTML+"  نفر رای داده اند "
+    setTimeout(() => {
+        jstextbefore2.style.display = "none";
+        jstext2_flex.style.display = "none";
+    }, 3000)
+    if (voteflex.innerHTML==0) {
+        jstext2_flex.innerHTML="تو اولین باش, هنوز کسی رای نداده"
+        jstext2_flex.style.height=("4rem")
+    }
+    else{
+        jstext2_flex.style.height=("2rem")
+    }
+    if (voteflex.innerHTML==1) {
+        jstext2_flex.innerHTML="فقط یک نفر رای داده است"
+    }
+}
+function jstext3() {
+    jstextbefore3.style.display = "block";
+    jstext3_sas.style.display = "block";
+    jstext3_sas.innerHTML=+votesas.innerHTML+"  نفر رای داده اند "
+    setTimeout(() => {
+        jstextbefore3.style.display = "none";
+        jstext3_sas.style.display = "none";
+    }, 3000)
+    if (votesas.innerHTML==0) {
+        jstext3_sas.innerHTML="تو اولین باش, هنوز کسی رای نداده"
+        jstext3_sas.style.height=("4rem")
+    }
+    else{
+        jstext3_sas.style.height=("2rem")
+    }
+    if (votesas.innerHTML==1) {
+        jstext3_sas.innerHTML="فقط یک نفر رای داده است"
+    }
+}
+
+
