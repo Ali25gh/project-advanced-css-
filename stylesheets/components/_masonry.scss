@@ -1,0 +1,14 @@
+.mansonry{
+    @include flex(center,center,column);
+    &__box{
+        columns: 4;
+        column-width: 30rem;
+        column-gap: 2rem;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__input{
+        @extend %hidden
+    }
+}

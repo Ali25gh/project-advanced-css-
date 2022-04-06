@@ -1,4 +1,4 @@
-.accordion__input {
+.accordion__input, .mansonry__input {
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -164,6 +164,14 @@ a:hover {
 
 .mb-50 {
   margin-bottom: 5rem;
+}
+
+.mt-60 {
+  margin-top: 6rem;
+}
+
+.mb-60 {
+  margin-bottom: 6rem;
 }
 
 .margin__r-auto {
@@ -1386,8 +1394,10 @@ a:hover {
 }
 
 .course__result {
+  font-family: "vazir";
   padding: 0.5rem;
   margin: 0.2rem;
+  margin-right: 1rem;
 }
 
 .course__result1 {
@@ -1407,6 +1417,38 @@ a:hover {
     top: 58.8rem;
     left: 15.6rem;
   }
+}
+
+.course__cursor {
+  cursor: pointer;
+}
+
+.course__js-text {
+  font-family: "vazir";
+  font-size: 1.1rem;
+  position: absolute;
+  top: 47.6rem;
+  left: 16.5rem;
+  z-index: 1;
+  width: 11.95rem;
+  height: 2rem;
+  color: black;
+  background-color: #f0deb9;
+  border-radius: 10%;
+  text-align: center;
+  display: none;
+}
+
+.course__js-text-before {
+  width: 10px;
+  height: 10px;
+  background: #a8cae4;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 47.2rem;
+  right: 18rem;
+  display: none;
 }
 
 .course__stars {
@@ -1924,6 +1966,35 @@ a:hover {
   left: -80px;
   -webkit-transition: left 0.5s cubic-bezier(0.65, 0.02, 0.38, 0.98);
   transition: left 0.5s cubic-bezier(0.65, 0.02, 0.38, 0.98);
+}
+
+.mansonry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mansonry__box {
+  -webkit-columns: 4;
+          columns: 4;
+  -webkit-column-width: 30rem;
+          column-width: 30rem;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.mansonry__img {
+  width: 100%;
 }
 
 .nav__lists {
