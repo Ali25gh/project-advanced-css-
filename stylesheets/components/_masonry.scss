@@ -1,14 +1,143 @@
-.mansonry{
-    @include flex(center,center,column);
-    &__box{
+.mansonry {
+    @include flex(center, center, column);
+
+    &__box {
+        height: 97rem;
         columns: 4;
         column-width: 30rem;
         column-gap: 2rem;
     }
-    &__img{
-        width: 100%;
+    &__item {
+        overflow: hidden;
+        position: relative;
+        margin: auto auto 1rem auto;
+        border-radius: 0.3rem;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(62, 62, 62, 0) 0%,
+                rgba(62, 62, 62, 0.1) 20%,
+                rgba(62, 62, 62, 0.7) 70%,
+                rgba(62, 62, 62, 1) 100%
+            );
+            transform: translateY(40%);
+        }
+        &:hover {
+            .mansonry__overley {
+                transform: translateY(-1%);
+                background: rgb(62, 62, 62);
+                background: linear-gradient(
+                    0deg,
+                    rgba(62, 62, 62, 0.35898109243697474) 60%,
+                    rgba(62, 62, 62, 0.1741071428571429) 70%,
+                    rgba(62, 62, 62, 0) 78%,
+                    rgba(255, 255, 255, 0.014443277310924318) 82%
+                );
+            }
+            .mansonry__overley h4 {
+                padding-top: 8rem;
+                padding-bottom: 2rem;
+            }
+            .mansonry__overley p {
+                margin-bottom: 3rem;
+            }
+        }
     }
-    &__input{
-        @extend %hidden
+    &__overley {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        color: $color-white;
+        @include flex(space-evenly, center, column);
+        transform: translateY(70%);
+        z-index: 2;
+        transition: all 0.4s ease;
+        border-top-right-radius: 5rem;
+        border-top-left-radius: 5rem;
+        p,
+        i,
+        h4 {
+            color: $color-white;
+            font-size: 1.8rem;
+        }
+        p,
+        i {
+            transition: all 0.3s ease;
+        }
+        i {
+            font-size: 3rem;
+            &:hover {
+                color: $color-green1;
+                transform: scale(1.2);
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        width: calc(100% + 2rem);
+        transform: translate3d(2rem, 0, 0);
+    }
+    &__input {
+        @extend %hidden;
+    }
+
+    .tabs {
+        position: relative;
+        @include flex(center, center);
+        margin: 4rem;
+        color: $color-gray5;
+        background: rgba(80, 91, 105, 0.5);
+        border-radius: 2rem;
+
+        @media only screen and (max-width: 576px) {
+            flex-direction: column;
+            height: 20rem;
+        }
+        & > label {
+            font-family: "vazir";
+            position: relative;
+            padding: 1rem 0;
+            width: 12rem;
+            font-size: 1.6rem;
+            font-weight: bolder;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+            &>h3{
+                color: $color-gray3;
+            }
+        }
+
+        &__lebel-bg {
+            position: absolute;
+            @include flex(center, center);
+            right: 0;
+            width: 12rem;
+            height: 4rem;
+            background-color: $color-gray5;
+            border-radius: 2rem;
+            transition: all 0.3s cubic-bezier(0.65, -0.01, 0.38, 0.99);
+
+            @media only screen and (max-width: 576px) {
+                top: 0;
+                height: 5rem;
+            }
+        }
     }
 }

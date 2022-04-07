@@ -1985,6 +1985,7 @@ a:hover {
 }
 
 .mansonry__box {
+  height: 97rem;
   -webkit-columns: 4;
           columns: 4;
   -webkit-column-width: 30rem;
@@ -1993,8 +1994,180 @@ a:hover {
           column-gap: 2rem;
 }
 
+.mansonry__item {
+  overflow: hidden;
+  position: relative;
+  margin: auto auto 1rem auto;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.mansonry__item::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(62, 62, 62, 0)), color-stop(20%, rgba(62, 62, 62, 0.1)), color-stop(70%, rgba(62, 62, 62, 0.7)), to(#3e3e3e));
+  background: linear-gradient(to bottom, rgba(62, 62, 62, 0) 0%, rgba(62, 62, 62, 0.1) 20%, rgba(62, 62, 62, 0.7) 70%, #3e3e3e 100%);
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+.mansonry__item:hover .mansonry__overley {
+  -webkit-transform: translateY(-1%);
+          transform: translateY(-1%);
+  background: #3e3e3e;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, rgba(62, 62, 62, 0.358981)), color-stop(70%, rgba(62, 62, 62, 0.174107)), color-stop(78%, rgba(62, 62, 62, 0)), color-stop(82%, rgba(255, 255, 255, 0.0144433)));
+  background: linear-gradient(0deg, rgba(62, 62, 62, 0.358981) 60%, rgba(62, 62, 62, 0.174107) 70%, rgba(62, 62, 62, 0) 78%, rgba(255, 255, 255, 0.0144433) 82%);
+}
+
+.mansonry__item:hover .mansonry__overley h4 {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+.mansonry__item:hover .mansonry__overley p {
+  margin-bottom: 3rem;
+}
+
+.mansonry__overley {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(70%);
+          transform: translateY(70%);
+  z-index: 2;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-top-right-radius: 5rem;
+  border-top-left-radius: 5rem;
+}
+
+.mansonry__overley p,
+.mansonry__overley i,
+.mansonry__overley h4 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.mansonry__overley p,
+.mansonry__overley i {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mansonry__overley i {
+  font-size: 3rem;
+}
+
+.mansonry__overley i:hover {
+  color: #d3f4f2;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  padding-bottom: 0.5rem;
+}
+
 .mansonry__img {
   width: 100%;
+  display: block;
+  width: calc(100% + 2rem);
+  -webkit-transform: translate3d(2rem, 0, 0);
+          transform: translate3d(2rem, 0, 0);
+}
+
+.mansonry .tabs {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem;
+  color: #3c4858;
+  background: rgba(80, 91, 105, 0.5);
+  border-radius: 2rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .mansonry .tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 20rem;
+  }
+}
+
+.mansonry .tabs > label {
+  font-family: "vazir";
+  position: relative;
+  padding: 1rem 0;
+  width: 12rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.mansonry .tabs > label:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mansonry .tabs > label > h3 {
+  color: #444444;
+}
+
+.mansonry .tabs__lebel-bg {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  width: 12rem;
+  height: 4rem;
+  background-color: #3c4858;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.65, -0.01, 0.38, 0.99);
+  transition: all 0.3s cubic-bezier(0.65, -0.01, 0.38, 0.99);
+}
+
+@media only screen and (max-width: 576px) {
+  .mansonry .tabs__lebel-bg {
+    top: 0;
+    height: 5rem;
+  }
 }
 
 .nav__lists {
