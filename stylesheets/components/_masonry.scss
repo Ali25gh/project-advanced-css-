@@ -1,11 +1,16 @@
 .mansonry {
     @include flex(center, center, column);
-
+    margin-top: 4rem;
+    margin-bottom: 6rem;
     &__box {
-        height: 97rem;
         columns: 4;
         column-width: 30rem;
         column-gap: 2rem;
+        
+        &:hover>*{
+            filter: brightness(.9) blur(2px);
+            transition: filter .6s ease;
+        }
     }
     &__item {
         overflow: hidden;
@@ -31,6 +36,7 @@
             transform: translateY(40%);
         }
         &:hover {
+            filter: none;
             .mansonry__overley {
                 transform: translateY(-1%);
                 background: rgb(62, 62, 62);
@@ -48,6 +54,9 @@
             }
             .mansonry__overley p {
                 margin-bottom: 3rem;
+            }
+            img {
+                transform: translate3d(2rem, 0, 0);
             }
         }
     }
@@ -88,10 +97,47 @@
         width: 100%;
         display: block;
         width: calc(100% + 2rem);
-        transform: translate3d(2rem, 0, 0);
+        transition: all .3s ease;
     }
+
     &__input {
         @extend %hidden;
+    }
+
+    & > input[id="all"]:checked ~ .tabs > label[for="all"] > h3,
+    & > input[id="css"]:checked ~ .tabs > label[for="css"] > h3,
+    & > input[id="php"]:checked ~ .tabs > label[for="php"] > h3,
+    & > input[id="java"]:checked ~ .tabs > label[for="java"] > h3 {
+        color: $color-white;
+    }
+    & > input[id="css"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="css"]),
+    & > input[id="php"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="php"]),
+    & > input[id="java"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="java"]) {
+        @extend %hidden;
+    }
+    & > input[id="all"]:checked ~ .tabs > .tabs__lebel-bg {
+        transform: translate3d(-3px, 0, 0);
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    & > input[id="css"]:checked ~ .tabs > .tabs__lebel-bg {
+        transform: translate3d(-12rem, 0, 0);
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 5rem, 0);
+        }
+    }
+    & > input[id="php"]:checked ~ .tabs > .tabs__lebel-bg {
+        transform: translate3d(-24rem, 0, 0);
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 10rem, 0);
+        }
+    }
+    & > input[id="java"]:checked ~ .tabs > .tabs__lebel-bg {
+        transform: translate3d(-35.5rem, 0, 0);
+        @media only screen and (max-width: 576px) {
+            transform: translate3d(0, 15rem, 0);
+        }
     }
 
     .tabs {
@@ -119,7 +165,7 @@
             &:hover {
                 transform: scale(1.1);
             }
-            &>h3{
+            & > h3 {
                 color: $color-gray3;
             }
         }

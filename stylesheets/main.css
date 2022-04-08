@@ -1,4 +1,6 @@
-.accordion__input, .mansonry__input {
+.accordion__input, .mansonry__input, .mansonry > input[id="css"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="css"]),
+.mansonry > input[id="php"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="php"]),
+.mansonry > input[id="java"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="java"]) {
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -1398,6 +1400,7 @@ a:hover {
   padding: 0.5rem;
   margin: 0.2rem;
   margin-right: 1rem;
+  padding-left: 1.3rem;
 }
 
 .course__result1 {
@@ -1414,7 +1417,7 @@ a:hover {
 
 @media only screen and (max-width: 576px) {
   .course__user {
-    top: 58.8rem;
+    top: 58.3rem;
     left: 15.6rem;
   }
 }
@@ -1439,6 +1442,13 @@ a:hover {
   display: none;
 }
 
+@media only screen and (max-width: 576px) {
+  .course__js-text {
+    top: 60.3rem;
+    left: 12.5rem;
+  }
+}
+
 .course__js-text-before {
   width: 10px;
   height: 10px;
@@ -1449,6 +1459,12 @@ a:hover {
   top: 47.2rem;
   right: 18rem;
   display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .course__js-text-before {
+    top: 59.8rem;
+  }
 }
 
 .course__stars {
@@ -1982,16 +1998,26 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
 .mansonry__box {
-  height: 97rem;
   -webkit-columns: 4;
           columns: 4;
   -webkit-column-width: 30rem;
           column-width: 30rem;
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
+}
+
+.mansonry__box:hover > * {
+  -webkit-filter: brightness(0.9) blur(2px);
+          filter: brightness(0.9) blur(2px);
+  -webkit-transition: -webkit-filter .6s ease;
+  transition: -webkit-filter .6s ease;
+  transition: filter .6s ease;
+  transition: filter .6s ease, -webkit-filter .6s ease;
 }
 
 .mansonry__item {
@@ -2015,6 +2041,11 @@ a:hover {
           transform: translateY(40%);
 }
 
+.mansonry__item:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
 .mansonry__item:hover .mansonry__overley {
   -webkit-transform: translateY(-1%);
           transform: translateY(-1%);
@@ -2030,6 +2061,11 @@ a:hover {
 
 .mansonry__item:hover .mansonry__overley p {
   margin-bottom: 3rem;
+}
+
+.mansonry__item:hover img {
+  -webkit-transform: translate3d(2rem, 0, 0);
+          transform: translate3d(2rem, 0, 0);
 }
 
 .mansonry__overley {
@@ -2090,8 +2126,63 @@ a:hover {
   width: 100%;
   display: block;
   width: calc(100% + 2rem);
-  -webkit-transform: translate3d(2rem, 0, 0);
-          transform: translate3d(2rem, 0, 0);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.mansonry > input[id="all"]:checked ~ .tabs > label[for="all"] > h3,
+.mansonry > input[id="css"]:checked ~ .tabs > label[for="css"] > h3,
+.mansonry > input[id="php"]:checked ~ .tabs > label[for="php"] > h3,
+.mansonry > input[id="java"]:checked ~ .tabs > label[for="java"] > h3 {
+  color: white;
+}
+
+.mansonry > input[id="all"]:checked ~ .tabs > .tabs__lebel-bg {
+  -webkit-transform: translate3d(-3px, 0, 0);
+          transform: translate3d(-3px, 0, 0);
+}
+
+@media only screen and (max-width: 576px) {
+  .mansonry > input[id="all"]:checked ~ .tabs > .tabs__lebel-bg {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.mansonry > input[id="css"]:checked ~ .tabs > .tabs__lebel-bg {
+  -webkit-transform: translate3d(-12rem, 0, 0);
+          transform: translate3d(-12rem, 0, 0);
+}
+
+@media only screen and (max-width: 576px) {
+  .mansonry > input[id="css"]:checked ~ .tabs > .tabs__lebel-bg {
+    -webkit-transform: translate3d(0, 5rem, 0);
+            transform: translate3d(0, 5rem, 0);
+  }
+}
+
+.mansonry > input[id="php"]:checked ~ .tabs > .tabs__lebel-bg {
+  -webkit-transform: translate3d(-24rem, 0, 0);
+          transform: translate3d(-24rem, 0, 0);
+}
+
+@media only screen and (max-width: 576px) {
+  .mansonry > input[id="php"]:checked ~ .tabs > .tabs__lebel-bg {
+    -webkit-transform: translate3d(0, 10rem, 0);
+            transform: translate3d(0, 10rem, 0);
+  }
+}
+
+.mansonry > input[id="java"]:checked ~ .tabs > .tabs__lebel-bg {
+  -webkit-transform: translate3d(-35.5rem, 0, 0);
+          transform: translate3d(-35.5rem, 0, 0);
+}
+
+@media only screen and (max-width: 576px) {
+  .mansonry > input[id="java"]:checked ~ .tabs > .tabs__lebel-bg {
+    -webkit-transform: translate3d(0, 15rem, 0);
+            transform: translate3d(0, 15rem, 0);
+  }
 }
 
 .mansonry .tabs {
