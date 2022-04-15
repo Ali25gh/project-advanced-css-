@@ -184,5 +184,23 @@ function jstext3() {
         jstext3_sas.innerHTML="فقط یک نفر رای داده است"
     }
 }
-
+//view
+let elment =document.getElementById("view1");
+let elment0 =elment.innerHTML=0;
+function view1() {
+    let elment_plus=parseInt(elment0+ 1);
+    elment.innerHTML="("+elment_plus+")" + " بازدید ";
+}
+let elment2 =document.getElementById("view2");
+let elment0_2 =elment2.innerHTML=0;
+function view2() {
+    let elment_plus=parseInt(elment0_2+ 1);
+    elment2.innerHTML="("+elment_plus+")" + " بازدید ";
+}
+let elment3 =document.getElementById("view3");
+let elment0_3 =elment3.innerHTML=0;
+function view3() {
+    let elment_plus=parseInt(elment0_3+ 1);
+    elment3.innerHTML="("+elment_plus+")" + " بازدید ";
+}
 

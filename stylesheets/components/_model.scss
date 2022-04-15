@@ -1,0 +1,46 @@
+.model{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0,0,0,.5);
+    animation:none;
+    @extend %hidden;
+    &:target{
+        @extend %block;
+    }
+    &__content{
+        position: relative;
+        @include flex(center,center,column);
+        max-width: 45rem;
+        margin: 10rem auto 0 auto;
+        padding: 2rem;
+        background-color: $color-white;
+        border-radius: 5px;
+        @media only screen and (max-width: 576px) {
+            max-width: 80%;
+        }
+        @media only screen and (max-width: 768px) {
+            max-width: 70%;
+        }
+    
+        @media only screen and (max-width: 992px) {
+            max-width: 60%;
+        }
+        
+    }
+    &__close{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 3rem;
+        color: $color-red1;
+        z-index: 21;
+        &:hover{
+            color: rgba($color-red1,.8)  ;
+        }
+
+    }
+}

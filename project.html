@@ -238,7 +238,7 @@
                     </div>
                     <div class="course__header">
                         <img src="images/sass-bg.jpg" alt="sass course" class="course__img" />
-                        <a href="#" class="course__details-link">
+                        <a onclick="view1()" href="#" class="course__details-link">
                             <span>ورود به سرفصل ها</span>
                             <i class="fas fa-angle-left"></i>
                         </a>
@@ -268,7 +268,7 @@
                             </span>
                             <span>
                                 <i class="fas fa-eye"></i>
-                                <span>۱۵۰۰ مشاهده</span>
+                                <span id="view1" style="font-family: vazir;">0</span>
                             </span>
                             <ul class="course__tags">
                                 <li class="course__tag course__tag--blue"><a href="#">آموزش sass</a></li>
@@ -308,7 +308,7 @@
                     </div>
                     <div class="course__header">
                         <img src="images/flex-bg.jpg" alt="flex course" class="course__img" />
-                        <a href="#" class="course__details-link">
+                        <a onclick="view2()" href="#" class="course__details-link">
                             <span>ورود به سرفصل ها</span>
                             <i class="fas fa-angle-left"></i>
                         </a>
@@ -338,7 +338,7 @@
                             </span>
                             <span>
                                 <i class="fas fa-eye"></i>
-                                <span>۱۵۰۰ مشاهده</span>
+                                <span id="view2" style="font-family: vazir;">0</span>
                             </span>
                             <ul class="course__tags">
                                 <li class="course__tag course__tag--blue"><a href="#">آموزش flex</a></li>
@@ -377,7 +377,7 @@
                     </div>
                     <div class="course__header">
                         <img src="images/css3-bg.jpg" alt="css3 course" class="course__img" />
-                        <a href="#" class="course__details-link">
+                        <a onclick="view3()" href="#" class="course__details-link">
                             <span>ورود به سرفصل ها</span>
                             <i class="fas fa-angle-left"></i>
                         </a>
@@ -407,7 +407,7 @@
                             </span>
                             <span>
                                 <i class="fas fa-eye"></i>
-                                <span>۱۵۰۰ مشاهده</span>
+                                <span id="view3" style="font-family: vazir;">0</span>
                             </span>
                             <ul class="course__tags">
                                 <li class="course__tag course__tag--blue"><a href="#">آموزش css</a></li>
@@ -748,7 +748,52 @@ c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-
             </div>
         </div>
     </div>
+    <div class="contact mt-50 mb-50">
+        <div class="glass">
+            <form action="#" class="form">
+                <div class="form__group">
+                    <input type="text" id="fullname">
+                    <label for="fullname">نام کامل</label>
+                </div>
+                <div class="form__group">
+                    <input type="email" id="email">
+                    <label for="email">ایمیل</label>
+                    <span class="form__input-bar"></span>
+                </div>
+                <div class="form__group">
+                    <div class="form__check">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">آقا</label>
+                    </div>
+                    <div class="form__check">
+                        <input type="radio" name="gender" id="female">
+                        <label for="male">خانم</label>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">عضویت در خبر نامه</label>
+                </div>
+                <button class="form__button btn btn__rippel btn__rippel--blue">
+                    <i class="fas fa-paper-plane"></i> <span>ارسال</span>
+                </button>
+            </form>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d345891.1896510203!2d59.27977171882111!3d36.34710183539823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6c911abe4131d7%3A0xc9c57e3a9318753b!2sMashhad%2C%20Razavi%20Khorasan%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1649679223392!5m2!1sen!2s"
+            class="maps" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="model" id="10">
+        <div class="model__content">
+            <a href="#gallery" class="model__close"><i class="fas fa-window-close"></i></a>
+            <img src="images/gallery/10.jpg" class="image-responsive" alt="10img">
+            <div class="model__text">
+                <p>با خواندن این متن وقت خود را تلف کردید این صرفا یک متن تستی است</p>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="script/rate.js"></script>
+<script src="script/course.js"></script>
 
 </html>

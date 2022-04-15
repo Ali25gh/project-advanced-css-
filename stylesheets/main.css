@@ -1,9 +1,15 @@
 .accordion__input, .mansonry__input, .mansonry > input[id="css"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="css"]),
 .mansonry > input[id="php"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="php"]),
-.mansonry > input[id="java"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="java"]) {
+.mansonry > input[id="java"]:checked ~ .mansonry__box > .mansonry__item:not([data-lang~="java"]), .model {
   display: none;
   opacity: 0;
   visibility: hidden;
+}
+
+.model:target {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 *,
@@ -178,6 +184,10 @@ a:hover {
 
 .margin__r-auto {
   margin-right: auto;
+}
+
+.image-responsive {
+  width: 100%;
 }
 
 .hidden {
@@ -2261,6 +2271,199 @@ a:hover {
   }
 }
 
+.model {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: none;
+          animation: none;
+}
+
+.model__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 45rem;
+  margin: 10rem auto 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+  .model__content {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .model__content {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .model__content {
+    max-width: 60%;
+  }
+}
+
+.model__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #f15a24;
+  z-index: 21;
+}
+
+.model__close:hover {
+  color: rgba(241, 90, 36, 0.8);
+}
+
+.maps {
+  display: block;
+  width: 100%;
+  height: 49rem;
+  border: 0;
+  outline: 0;
+}
+
+.glass {
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  width: 50rem;
+  height: 40rem;
+  border: 1px solid #f1f1f1;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.329);
+  -webkit-box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
+          box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+@supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+  .glass {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .glass {
+    right: 2rem;
+    top: 2rem;
+    width: 39%;
+    height: 22rem;
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .glass {
+    position: relative;
+    right: 2rem;
+    top: 5rem;
+    width: 90%;
+    height: 30rem;
+  }
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.form label {
+  font-size: 1.5rem;
+  color: #3c4858;
+  cursor: pointer;
+}
+
+.form__group {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.form__check {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=rdio],
+.form input[type=checkbox] {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.form input[type=text], .form input[type=email] {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.form input[type=text] + label, .form input[type=email] + label {
+  position: absolute;
+  top: var(--top, 1.3rem);
+  right: var(--right, 1rem);
+  pointer-events: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.form input[type=text]:focus, .form input[type=email]:focus {
+  border: 2px solid #2196f3;
+}
+
+.form input[type=text]:focus + label, .form input[type=email]:focus + label {
+  --top:-1rem;
+  --right:.5rem;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  background-color: white;
+  border-radius: 3px;
+}
+
 .nav__lists {
   position: relative;
   display: -webkit-box;
@@ -2948,5 +3151,9 @@ a:hover {
             flex-direction: column;
     padding: 0 9rem;
   }
+}
+
+.contact {
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */
