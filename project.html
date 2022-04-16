@@ -13,7 +13,7 @@
     <title>ali</title>
 </head>
 
-<body>
+<body  >
 
     <div class="navbar">
         <div class="container pt-20 pb-20 flex justify-content-center justify-content-space-between">
@@ -633,7 +633,7 @@ c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-
             </div>
         </div>
     </div>
-    <div class="gallery mt60 mb60">
+    <div class="gallery mt60 mb60" >
         <div class="container mansonry ">
             <input type="radio" class="mansonry__input" name="tab" id="all" checked>
             <input type="radio" class="mansonry__input" name="tab" id="css">
@@ -748,15 +748,15 @@ c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-
             </div>
         </div>
     </div>
-    <div class="contact mt-50 mb-50">
-        <div class="glass">
+    <div id="contact" class="contact mt-50 mb-50"   >
+        <div id="glass"  class="glass">
             <form action="#" class="form">
                 <div class="form__group">
-                    <input type="text" id="fullname">
+                    <input type="text" id="fullname" onblur="glass_animation()">
                     <label for="fullname">نام کامل</label>
                 </div>
                 <div class="form__group">
-                    <input type="email" id="email">
+                    <input type="email" id="email" onblur="glass_animation()">
                     <label for="email">ایمیل</label>
                     <span class="form__input-bar"></span>
                 </div>
@@ -795,5 +795,5 @@ c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-
     </div>
 </body>
 <script src="script/course.js"></script>
-
+<script src="script/form.js"></script>
 </html>

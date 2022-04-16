@@ -776,6 +776,76 @@ a:hover {
   }
 }
 
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+    -webkit-box-shadow: 4px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 4px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    -webkit-box-shadow: 9px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 9px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+    -webkit-box-shadow: 14px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 14px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+    -webkit-box-shadow: 4px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 4px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    -webkit-box-shadow: 9px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 9px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+    -webkit-box-shadow: 14px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 14px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
+            box-shadow: 18px 13px 29px -5px rgba(0, 0, 0, 0.72);
+  }
+}
+
 .search {
   position: relative;
   display: -webkit-box;
@@ -2349,7 +2419,7 @@ a:hover {
   right: 5rem;
   top: 5rem;
   width: 50rem;
-  height: 40rem;
+  height: 36rem;
   border: 1px solid #f1f1f1;
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.329);
@@ -2385,6 +2455,10 @@ a:hover {
     width: 90%;
     height: 30rem;
   }
+}
+
+.glass:focus-within {
+  background-color: white;
 }
 
 .form {
@@ -2428,13 +2502,14 @@ a:hover {
 .form input[type=email],
 .form input[type=rdio],
 .form input[type=checkbox] {
+  font-weight: bolder;
   position: relative;
   background-color: transparent;
   border: 0;
   outline: 0;
 }
 
-.form input[type=text], .form input[type=email] {
+.form input[type=text] {
   width: 100%;
   height: 5rem;
   padding: 1rem;
@@ -2442,7 +2517,7 @@ a:hover {
   border-radius: 4px;
 }
 
-.form input[type=text] + label, .form input[type=email] + label {
+.form input[type=text] + label {
   position: absolute;
   top: var(--top, 1.3rem);
   right: var(--right, 1rem);
@@ -2451,17 +2526,60 @@ a:hover {
   transition: all .2s;
 }
 
-.form input[type=text]:focus, .form input[type=email]:focus {
+.form input[type=text]:focus {
   border: 2px solid #2196f3;
 }
 
-.form input[type=text]:focus + label, .form input[type=email]:focus + label {
+.form input[type=text]:focus + label {
   --top:-1rem;
   --right:.5rem;
   font-size: 1.1rem;
   padding: 0 1rem;
   background-color: white;
   border-radius: 3px;
+}
+
+.form input[type=email] {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.form input[type=email] + label {
+  position: absolute;
+  top: var(--top, 1.3rem);
+  right: var(--right, 1rem);
+  pointer-events: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.form input[type=email] ~ .form__input-bar {
+  position: absolute;
+  bottom: 0;
+  right: 23rem;
+  width: var(--width, 0);
+  height: .2rem;
+  background-color: #2196f3;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.form input[type=email]:focus + label {
+  --top:-1rem;
+  --right:.5rem;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.form input[type=email]:focus ~ .form__input-bar {
+  --width:100%;
 }
 
 .nav__lists {
