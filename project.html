@@ -753,23 +753,25 @@ c-6-30.6-20.1-60.4-43.7-80.9c-20.6-17.9-46.9-27.8-73.3-34.7c-55.8-14.6-112-27.9-
             <form action="#" class="form">
                 <div class="form__group">
                     <input type="text" id="fullname" onblur="glass_animation()">
-                    <label for="fullname">نام کامل</label>
+                    <label for="fullname" id="label_fullname">نام کامل</label>
                 </div>
                 <div class="form__group">
                     <input type="email" id="email" onblur="glass_animation()">
-                    <label for="email">ایمیل</label>
+                    <label for="email" id="label_email">ایمیل</label>
                     <span class="form__input-bar"></span>
                 </div>
                 <div class="form__group">
                     <div class="form__check">
-                        <input type="radio" name="gender" id="male">
+                        <input type="radio" name="gender" id="male" value="male" onclick="male_radio()">
                         <label for="male">آقا</label>
                     </div>
                     <div class="form__check">
-                        <input type="radio" name="gender" id="female">
+                        <input type="radio" name="gender" id="female" value="female" onclick="fmale_radio()">
                         <label for="male">خانم</label>
                     </div>
                 </div>
+                 <div class="form__check-text" id="radio_text">سلام آقا😉<span id="radio_hand">👋</span></div> 
+                 <div class="form__check-text" id="radio_text_2">سلام خانم😊<span class="fmale_span" id="radio_hand_2">👋</span></div> 
                 <div class="form__group">
                     <input type="checkbox" id="newsletter">
                     <label for="newsletter">عضویت در خبر نامه</label>
