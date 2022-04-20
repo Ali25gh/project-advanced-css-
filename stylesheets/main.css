@@ -25,6 +25,7 @@
 html {
   font-size: 62.5%;
   /* ba in kar bar hasb 10 px mohasebe mishavad na shoonzdah pixel default pas har 1rem mishe 10pxel */
+  overflow-x: hidden;
 }
 
 body {
@@ -1186,8 +1187,8 @@ a:hover {
   font-size: 2rem;
   -webkit-transform: rotateY(-0.5turn);
           transform: rotateY(-0.5turn);
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   opacity: 0;
 }
 
@@ -1197,8 +1198,8 @@ a:hover {
   top: 1rem;
   left: 1rem;
   font-size: 2rem;
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   opacity: 1;
 }
 
@@ -1216,6 +1217,47 @@ a:hover {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
   opacity: 1;
+}
+
+.btn__rippel {
+  color: white;
+}
+
+.btn__rippel span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn__rippel--blue {
+  background-color: #32a1fc;
+}
+
+.btn__rippel--blue::after {
+  background-color: #1d4e74;
+}
+
+.btn__rippel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+}
+
+.btn__rippel:active::after, .btn__rippel:focus::after {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  -webkit-transition: opacity 1s ease,-webkit-transform .8s ease;
+  transition: opacity 1s ease,-webkit-transform .8s ease;
+  transition: opacity 1s ease,transform .8s ease;
+  transition: opacity 1s ease,transform .8s ease,-webkit-transform .8s ease;
 }
 
 .shadow-none {
@@ -2153,6 +2195,7 @@ a:hover {
 }
 
 .mansonry__box {
+  overflow: hidden;
   -webkit-columns: 4;
           columns: 4;
   -webkit-column-width: 30rem;
@@ -2509,21 +2552,20 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .glass {
-    right: 2rem;
-    top: 2rem;
-    width: 39%;
-    height: 22rem;
-    text-align: justify;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .glass {
     position: relative;
     right: 2rem;
     top: 5rem;
     width: 90%;
-    height: 30rem;
+    height: 34rem;
+  }
+  .glass .form__input-bar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 369px) {
+  .glass .form__check-text {
+    display: none !important;
   }
 }
 

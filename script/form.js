@@ -27,7 +27,7 @@ function glass_animation() {
         label_fullname.style.backgroundColor = "white";
         label_fullname.style.webkitBorderBottomRightRadius = "20rem";
         label_fullname.style.webkitBorderBottomLeftRadius = "20rem";
-        
+
     }
     if (email.innerHTML = !"") {
         label_email.style.top = "-1rem";
@@ -39,36 +39,46 @@ function glass_animation() {
         label_email.style.webkitBorderBottomLeftRadius = "20rem";
     }
 }
- function male_radio() {
-     radio_text.style.right="20rem";
-     radio_hand.style.animation="wave-hand 2.6s .3s";
-    glass.style.animation= "none";
+function male_radio() {
+    radio_text.style.right = "20rem";
+    radio_hand.style.animation = "wave-hand 2.6s .3s";
+    glass.style.animation = "none";
     setTimeout(() => {
-        radio_text.style.right="60rem";
+        radio_text.style.right = "70rem";
     }, 2000)
-    if(radio_text_2.style.right=="20rem"){
-        radio_text.style.display="none";
+    if (radio_text_2.style.right == "20rem") {
+        radio_text.style.display = "none";
         setTimeout(() => {
-            radio_text.style.display="block";
-            radio_text.style.right="20rem";
+            radio_text.style.opacity = "0";
+            radio_text.style.animation = "fade-in .76s ease";
+            radio_text.style.display = "block";
+            radio_text.style.right = "20rem";
+            setTimeout(() => {
+                radio_text.style.opacity = "1";  
+            }, 500)
             return male_radio()
         }, 2000)
     }
- }
-  function fmale_radio() {
-     radio_text_2.style.right="20rem";
-     radio_hand_2.style.animation="wave-hand 2.6s .3s";
-    glass.style.animation= "none";
+}
+function fmale_radio() {
+    radio_text_2.style.right = "20rem";
+    radio_hand_2.style.animation = "wave-hand 2.6s .3s";
+    glass.style.animation = "none";
     setTimeout(() => {
-        radio_text_2.style.right="60rem";
+        radio_text_2.style.right = "70rem";
     }, 2000)
-    if(radio_text.style.right=="20rem"){
-        radio_text_2.style.display="none";
+    if (radio_text.style.right == "20rem") {
+        radio_text_2.style.display = "none";
         setTimeout(() => {
-            radio_text_2.style.display="block";
-            radio_text_2.style.right="20rem";
+            radio_text_2.style.opacity = "0";
+            radio_text_2.style.animation = "fade-in .76s ease";
+            radio_text_2.style.display = "block";
+            radio_text_2.style.right = "20rem";
+            setTimeout(() => {
+                radio_text_2.style.opacity = "1";  
+            }, 500)
             return fmale_radio()
         }, 2000)
     }
- }
+}
 //Etebar sangi form

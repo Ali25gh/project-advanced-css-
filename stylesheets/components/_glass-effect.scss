@@ -15,21 +15,21 @@
         backdrop-filter: blur(4px);
     }
     @media only screen and (max-width: 768px) {
-        right: 2rem;
-        top: 2rem;
-        width: 39%;
-        height: 22rem;
-        text-align: justify;
-    }
-    @media only screen and (max-width: 576px) {
         position: relative;
         right: 2rem;
         top: 5rem;
         width: 90%;
-        height: 30rem;
+        height: 34rem;
+        .form__input-bar{
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 369px) {
+        .form__check-text {
+            display: none !important;
+        }
     }
     &:focus-within {
         background-color: $color-white;
     }
 }
-
