@@ -1,0 +1,14 @@
+.pattern {
+    background-image: 
+    repeating-linear-gradient(
+        45deg,
+        rgba($color-pink1, .4) 0 1px,
+        transparent 0 50px
+    ),   
+    repeating-linear-gradient(
+        -45deg,
+        rgba($color-white, .1) 0 1px,        
+        transparent 0 50px
+    ),   
+    linear-gradient(to bottom, $color-purple2, $color-pink2);
+}

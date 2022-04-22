@@ -2,11 +2,12 @@
 
 @import "abstracts/variables", "abstracts/functions", "abstracts/mixins", "abstracts/placeholder";
 
-@import "base/base", "base/fonts", "base/helpers", "base/taypography" ,"base/animation";
+@import "base/base", "base/fonts", "base/helpers", "base/taypography", "base/animation";
 
-@import "components/search" ,"components/buttons" ,"components/icons" , "components/courses" ,"components/cards" ,"components/mask-video" ,"components/reple-play-button" ,"components/accordion","components/masonry","components/model","components/maps","components/glass-effect","components/form";
-
+@import "components/search", "components/buttons", "components/icons", "components/courses", "components/cards",
+    "components/mask-video", "components/reple-play-button", "components/accordion", "components/masonry",
+    "components/model", "components/maps", "components/glass-effect", "components/form", "components/pattern";
 
 @import "layout/nav", "layout/navbar", "layout/header";
 
-@import "pages/home"
+@import "pages/home";

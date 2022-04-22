@@ -2803,6 +2803,11 @@ a:hover {
           transform: rotate(45deg) scale(1);
 }
 
+.pattern {
+  background-image: repeating-linear-gradient(45deg, rgba(192, 136, 233, 0.4) 0 1px, transparent 0 50px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 0 50px), -webkit-gradient(linear, left top, left bottom, from(#725fa5), to(#d97b93));
+  background-image: repeating-linear-gradient(45deg, rgba(192, 136, 233, 0.4) 0 1px, transparent 0 50px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 0 50px), linear-gradient(to bottom, #725fa5, #d97b93);
+}
+
 .nav__lists {
   position: relative;
   display: -webkit-box;
@@ -3494,5 +3499,30 @@ a:hover {
 
 .contact {
   position: relative;
+}
+
+.testimonials {
+  padding: 30rem 1rem;
+}
+
+.testimonials__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .testimonials__boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */
