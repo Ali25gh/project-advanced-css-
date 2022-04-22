@@ -1236,7 +1236,11 @@ a:hover {
   background-color: #1d4e74;
 }
 
-.btn__rippel::after {
+.btn__rippel--blue::before {
+  background-color: #1d4e74;
+}
+
+.btn__rippel::after, .btn__rippel::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1245,19 +1249,37 @@ a:hover {
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
   opacity: 1;
 }
 
-.btn__rippel:active::after, .btn__rippel:focus::after {
+.btn__rippel::after {
+  -webkit-transform: translate(-70%, -70%) scale(0);
+          transform: translate(-70%, -70%) scale(0);
+}
+
+.btn__rippel::before {
+  -webkit-transform: translate(-20%, -20%) scale(0);
+          transform: translate(-20%, -20%) scale(0);
+}
+
+.btn__rippel:focus::before, .btn__rippel:active::before {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   opacity: 0;
-  -webkit-transition: opacity 1s ease,-webkit-transform .8s ease;
-  transition: opacity 1s ease,-webkit-transform .8s ease;
-  transition: opacity 1s ease,transform .8s ease;
-  transition: opacity 1s ease,transform .8s ease,-webkit-transform .8s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 0.8s ease;
+  transition: opacity 1s ease, -webkit-transform 0.8s ease;
+  transition: opacity 1s ease, transform 0.8s ease;
+  transition: opacity 1s ease, transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+
+.btn__rippel:hover::after {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  -webkit-transition: opacity 1s 1.05s ease, -webkit-transform 0.8s 1.05s ease;
+  transition: opacity 1s 1.05s ease, -webkit-transform 0.8s 1.05s ease;
+  transition: opacity 1s 1.05s ease, transform 0.8s 1.05s ease;
+  transition: opacity 1s 1.05s ease, transform 0.8s 1.05s ease, -webkit-transform 0.8s 1.05s ease;
 }
 
 .shadow-none {
@@ -2626,7 +2648,7 @@ a:hover {
   top: -0.1rem;
   right: 7rem;
   display: block;
-  padding: .1rem;
+  padding: 0.1rem;
   -webkit-transform-origin: 78% 75%;
           transform-origin: 78% 75%;
   font-size: 1.4rem;
@@ -2637,7 +2659,7 @@ a:hover {
   top: -0.1rem;
   right: 8.2rem;
   display: block;
-  padding: .1rem;
+  padding: 0.1rem;
   -webkit-transform-origin: 78% 75%;
           transform-origin: 78% 75%;
   font-size: 1.4rem;
@@ -2801,6 +2823,32 @@ a:hover {
   opacity: 1;
   -webkit-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
+}
+
+.form__error {
+  position: absolute;
+  top: 32.1rem;
+  right: -15.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.6rem;
+  z-index: 5;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 768px) {
+  .form__error {
+    top: 29.1rem;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .form__error {
+    right: 13.9rem;
+    font-size: 1.2rem;
+  }
 }
 
 .pattern {

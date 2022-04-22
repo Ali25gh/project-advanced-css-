@@ -83,17 +83,22 @@
     }
     &__rippel {
         color: $color-white;
+
         & span {
             position: relative;
             z-index: 2;
         }
-        &--blue{
+        &--blue {
             background-color: $color-blue5;
-            &::after{
+            &::after {
+                background-color: $color-blue6;
+            }
+            &::before {
                 background-color: $color-blue6;
             }
         }
-        &::after {
+        &::after,
+        &::before {
             content: "";
             position: absolute;
             top: 50%;
@@ -102,17 +107,29 @@
             width: 20rem;
             height: 20rem;
             border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
             opacity: 1;
         }
-        &:active::after,
-        &:focus::after{
-            transform: translate(-50%,-50%) scale(1);
+        &::after {
+            transform: translate(-70%, -70%) scale(0);
+        }
+        &::before {
+            transform: translate(-20%, -20%) scale(0);
+        }
+        &:focus::before,
+        &:active::before {
+            transform: translate(-50%, -50%) scale(1);
             opacity: 0;
-            transition: opacity 1s ease,transform .8s ease;
+            transition: opacity 1s ease, transform 0.8s ease;
+        }
+        &:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+            transition: opacity 1s 1.05s ease, transform 0.8s 1.05s ease;
         }
     }
+    
 }
+
 .shadow-none {
     box-shadow: none;
     text-shadow: none;
