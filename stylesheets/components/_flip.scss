@@ -1,0 +1,65 @@
+.flip {
+    width: 100%;
+    height: 26rem;
+    margin: 0 2rem;
+    perspective: 999px;
+
+    @media only screen and (max-width: 992px) {
+        margin: 2rem auto;
+    }
+
+    &:hover > .flip__card {
+        transform: rotateY(180deg);
+    }
+    &:hover .flip__back-side {
+        display: block;
+    }
+
+    &__card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform .3s ease;
+    }
+
+    &__main-side,
+    &__back-side {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include flex(flex-start, center);
+        padding: 4rem;
+        border-radius: 5px;
+        background-color: $color-white;
+        //When opacity is less than < 1 
+        // backface-visibility: hidden;        
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 5rem;
+            color: $color-gray2;
+            font-size: 8rem;
+            font-weight: 900;
+            opacity: .45;
+        }
+    }
+
+    &__main-side {
+        &::after {
+            content: "\f10e";
+        }
+    }
+    
+    &__back-side {
+        transform: rotateY(180deg);
+        &::after {
+            content: "\f10d";            
+        }
+        display: none; 
+    }
+    
+}

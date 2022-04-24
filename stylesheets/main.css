@@ -2856,6 +2856,85 @@ a:hover {
   background-image: repeating-linear-gradient(45deg, rgba(192, 136, 233, 0.4) 0 1px, transparent 0 50px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 0 50px), linear-gradient(to bottom, #725fa5, #d97b93);
 }
 
+.flip {
+  width: 100%;
+  height: 26rem;
+  margin: 0 2rem;
+  -webkit-perspective: 999px;
+          perspective: 999px;
+}
+
+@media only screen and (max-width: 992px) {
+  .flip {
+    margin: 2rem auto;
+  }
+}
+
+.flip:hover > .flip__card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip:hover .flip__back-side {
+  display: block;
+}
+
+.flip__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.flip__main-side, .flip__back-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.flip__main-side::after, .flip__back-side::after {
+  position: absolute;
+  bottom: 0;
+  left: 5rem;
+  color: #cccccc;
+  font-size: 8rem;
+  font-weight: 900;
+  opacity: .45;
+}
+
+.flip__main-side::after {
+  content: "\f10e";
+}
+
+.flip__back-side {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  display: none;
+}
+
+.flip__back-side::after {
+  content: "\f10d";
+}
+
 .nav__lists {
   position: relative;
   display: -webkit-box;
