@@ -106,21 +106,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 btn.addEventListener("click", function () {
     if ((email.value == "") || (fullname.value == "")) {
-        error.style.right = "19.9rem"
-        error.innerHTML = "فیلد ها را پر کنید"
+        error.style.right = "19.9rem";
+        error.innerHTML = "فیلد ها را پر کنید";
     }
     else if (famale_radio.value == "not_selected" && (male.value == "not_selected")) {
-        error.style.right = "13.9rem"
-        error.style.top = "49.9rem"
+        error.style.right = "13.9rem";
+        error.style.top = "49.9rem";
         setTimeout(() => {
             error.innerHTML = "لطفا جنسیت خود را انتخاب کنید" + " " + "🙍‍♀️🙎‍♂️";
-            error.style.top = "30.9rem"
+            error.style.top = "30.9rem";
         }, 700)
     }
     else {
-        error.style.top = "30.9rem"
-        error.style.right = "17.9rem"
-        error.innerHTML = "فرم ارسال شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>'
+        error.style.top = "30.9rem";
+        error.style.right = "17.9rem";
+        error.innerHTML = "فرم ارسال شد" + '<i class="fas fa-check" style="color: green;padding-right: 0.5rem;animation: wave-hand 2.6s .3s;"></i>';
     }
-
+    if (error.style.right == "17.9rem") {
+        setTimeout(() => {
+            glass.style.animation = "fade-out .76s ease";
+        }, 1100)
+        setTimeout(() => {
+            glass.style.display = "none";
+        }, 1600)
+    }
 })
