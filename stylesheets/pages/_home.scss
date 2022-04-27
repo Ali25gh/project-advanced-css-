@@ -87,7 +87,7 @@
     
 }
 .testimonials{
-    padding: 30rem 1rem;
+    padding: 7rem 1rem;
     &__boxes{
         @include flex(space-between,center);
         @media only screen and (max-width: 992px) {

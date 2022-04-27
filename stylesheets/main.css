@@ -191,8 +191,16 @@ a:hover {
   width: 100%;
 }
 
+.round {
+  border-radius: 50%;
+}
+
 .hidden {
   display: none;
+}
+
+.white {
+  color: white;
 }
 
 @media only screen and (max-width: 992px) {
@@ -2885,10 +2893,10 @@ a:hover {
   height: 100%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transition: -webkit-transform .47s ease;
+  transition: -webkit-transform .47s ease;
+  transition: transform .47s ease;
+  transition: transform .47s ease, -webkit-transform .47s ease;
 }
 
 .flip__main-side, .flip__back-side {
@@ -2933,6 +2941,76 @@ a:hover {
 
 .flip__back-side::after {
   content: "\f10d";
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  -webkit-transition: all 1.25s ease;
+  transition: all 1.25s ease;
+}
+
+.info p {
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .info p {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+.skew {
+  position: relative;
+  width: 100%;
+  height: 26rem;
+  margin: 0 2rem;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.skew::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: skew(-6deg);
+          transform: skew(-6deg);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 1;
+}
+
+.skew:hover::after {
+  -webkit-transform: skew(6deg);
+          transform: skew(6deg);
+}
+
+.skew:hover .info {
+  -webkit-transform: translateX(43px);
+          transform: translateX(43px);
+}
+
+.skew__wrap {
+  position: relative;
+  z-index: 2;
 }
 
 .nav__lists {
@@ -3629,7 +3707,7 @@ a:hover {
 }
 
 .testimonials {
-  padding: 30rem 1rem;
+  padding: 7rem 1rem;
 }
 
 .testimonials__boxes {

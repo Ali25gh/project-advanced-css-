@@ -1,0 +1,12 @@
+.info{
+    @include flex(flex-start,center);
+    margin: 1rem;
+    transition: all 1.25s ease;
+    & p{
+        padding-right: 1rem;
+        @media only screen and (max-width: 576px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}

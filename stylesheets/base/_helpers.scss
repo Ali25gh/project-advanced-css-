@@ -87,11 +87,16 @@
 .image-responsive{
     width: 100%;
 }
+.round{
+    border-radius: 50%;
+}
 .hidden {
     display: none;
 }
 
-
+.white{
+    color: white;
+}
 
 .show-small {
     @media only screen and (max-width: 992px) {
