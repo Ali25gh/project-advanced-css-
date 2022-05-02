@@ -28,12 +28,36 @@ html {
   overflow-x: hidden;
 }
 
+html::-webkit-scrollbar-track {
+  background-color: #cccccc;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(90deg, #cccccc 0%, #cccccc 25%, transparent 100%, rgba(0, 0, 0, 0.438) 75%, transparent);
+  border-radius: 2px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-image: -webkit-linear-gradient(90deg, #797171 0%, #6b6767 25%, transparent 100%, rgba(0, 0, 0, 0.438) 75%, transparent);
+}
+
 body {
   font-family: Verdana, "vazir", "lalezar", "Font Awesome 5 Free", Tahoma, sans-serif;
   font-size: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #262626;
 }
 
@@ -52,8 +76,8 @@ ul {
 a {
   color: #0d62da;
   text-decoration: none;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 a:hover {

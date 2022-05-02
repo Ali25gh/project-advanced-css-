@@ -11,14 +11,50 @@ html {
     font-size: 62.5%;
     /* ba in kar bar hasb 10 px mohasebe mishavad na shoonzdah pixel default pas har 1rem mishe 10pxel */
     overflow-x: hidden;
+    &::-webkit-scrollbar-track {
+        
+        background-color: #cccccc;
+        
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #f5f5f5;
+        
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        background-image: -webkit-linear-gradient(
+            90deg,
+            #cccccc 0%,
+            #cccccc 25%,
+            transparent 100%,
+            rgba(0, 0, 0, 0.438) 75%,
+            transparent
+        );
+        border-radius: 2px;
+        &:hover{
+            background-image: -webkit-linear-gradient(
+                90deg,
+                #797171 0%,
+                #6b6767 25%,
+                transparent 100%,
+                rgba(0, 0, 0, 0.438) 75%,
+                transparent
+            );
+        }
+    }
 }
-
 body {
     font-family: $font-stack;
     font-size: 1.5rem;
 }
-h1,h2,h3,h4,h5,h6{
-    color: darken($color-white,85%) ;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: darken($color-white, 85%);
 }
 button,
 textarea,
@@ -35,10 +71,9 @@ ul {
 a {
     color: $color-blue1;
     text-decoration: none;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: $color-orange1;
-    
 }
