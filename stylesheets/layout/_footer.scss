@@ -1,0 +1,161 @@
+.footer {
+    @include flex(center);
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba($color-white, 0.5);
+    @media only screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+    & h4 {
+        padding-bottom: 1.3rem;
+        color: $color-white;
+        border-bottom: 2px solid rgba($color-red2, 0.8);
+        font-size: 1.5rem;
+    }
+    //column1
+    &__about {
+        padding: 2rem;
+        width: 40%;
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    &__company {
+        @include flex(space-evenly, center, column);
+        height: 100%;
+        &>p{
+            color: $color-white;
+        }
+    }
+    &__socials {
+        @include flex(space-evenly);
+        width: 100%;
+        &--purple {
+            background-image: $instagram-gradient;
+        }
+        &--red {
+            background-color: $color-red2;
+        }
+        &--blue {
+            background-color: $color-blue5;
+        }
+        @media only screen and (max-width: 576px) {
+            flex-direction: column;
+            width: auto;
+        }
+    }
+    &__socials-link {
+        @include flex(center, center);
+        width: 12rem;
+        margin-left: 1rem;
+        border-radius: 30px;
+        padding: 3px;
+        color: $color-white;
+        transition: 0.2s;
+        &:hover {
+            & span {
+                transform: translateX(-6px) scale(1);
+                @media only screen and (max-width: 992px) {
+                    transform: scale(1) translateX(0);
+                }
+                color: $color-white;
+            }
+            & svg{
+                transform: scale(1.5);
+                @media only screen and (max-width: 992px) {
+                    transform: scale(1.5) translateX(6px);
+
+                }
+            }
+
+        }
+        & > svg{
+            display: inline-flex;
+            width: 3.5rem;
+            height: 3.5rem;
+            padding: 0.5rem;
+            margin-left: 1rem;
+            border-radius: 50%;
+            background-color: $color-white;
+            transition: all 0.5s ease;
+        }
+        & span {
+            transition: all 0.5s ease;
+        }
+        @media only screen and (max-width: 992px) {
+            margin-top: 5rem;
+        }
+    }
+    //column2
+    &__link {
+        padding: 2rem;
+        width: 30%;
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    &__links {
+        @include flex(center, flex-start, column);
+        & > a {
+            color: $color-white;
+            padding-top: 1.5rem;
+            transition: 0.2s;
+            &:hover {
+                color: $color-red1;
+            }
+        }
+    }
+    //column3
+    &__support {
+        @include flex(space-between, false, column);
+        padding: 2rem;
+        width: 30%;
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    &__hours {
+        @include flex(space-evenly, false, column);
+        height: 100%;
+        position: relative;
+    }
+    &__single-info {
+        @include flex(flex-start, center);
+        white-space: nowrap;
+        &__day{
+            text-align: center;
+            @include flex(center, center);
+        }
+        &__day > span {
+            margin-left: -9.5rem;
+            margin-right: -3.5rem;
+            font-size: 2rem;
+            color: $color-gray1;
+            opacity: 0.6;
+        }
+        & .footer__time{
+            margin-right: auto;
+            font-size: 1.5rem;
+            color: $color-white;
+        }
+        &__day > p {
+            margin-left: 1rem;
+            color: $color-white;
+            width: 100%;
+        }
+        &__margin{
+            margin-right: -6rem !important;
+            @media only screen and (max-width: 992px) {
+                margin-right:0;
+            }
+        }
+
+    }
+    &__payment{
+        @include flex(center,center);
+        border-top: 2px solid $color-white;
+        &>img{
+            width: 100%;
+            padding-top: 2rem;
+        }
+    }
+}
