@@ -68,6 +68,12 @@
 .pb-20 {
     padding-bottom: 2rem;
 }
+.pl-30 {
+    padding-left: 3rem;
+}
+.pl-60 {
+    padding-left: 6rem;
+}
 // margin
 .mt-50{
     margin-top: 5rem;
@@ -89,6 +95,11 @@
 }
 .round{
     border-radius: 50%;
+    transition: all 1.1s ease;
+    @media only screen and (max-width: 576px) {
+        width: 25%;
+        height: auto;
+    }
 }
 .hidden {
     display: none;

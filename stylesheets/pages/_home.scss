@@ -95,3 +95,17 @@
         }
     }
 }
+.footers{
+    background-image: image('background-footer.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__copyright{
+        padding: 2rem;
+        color: $color-white;
+        text-align: center;
+        & a{
+            color: $color-green1;
+        }
+    }
+}

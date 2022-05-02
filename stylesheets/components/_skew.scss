@@ -9,7 +9,7 @@
     &::after{
         content: "";
         position: absolute;
-        transform: skew(-6deg);
+        transform: skew(-4deg);
         top: 0;
         right: 0;
         left: 0;
@@ -18,18 +18,34 @@
         border-radius: 5px;
         transition: all .5s ease;
         z-index: 1;
+        @media only screen and (max-width: 576px) {
+            transform: skew(0);
+        }
     }
     &:hover::after{
-        transform: skew(6deg);
+        transform: skew(4deg);
     }
     &:hover{
         .info{
             transform: translateX(43px);
-            
+            @media only screen and (max-width: 576px) {
+                transform:translateX(0);
+            }
+        }
+        .round{
+            transform:rotate(360deg);
+            @media only screen and (max-width: 576px) {
+                transform:rotate(0);
+                width: 25%;
+                height: auto;
+            }
         }
     }
     &__wrap{
         position: relative;
         z-index: 2;
+        @media only screen and (max-width: 576px) {
+            font-size: 1.21rem;
+        }
     }
 }
