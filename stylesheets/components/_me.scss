@@ -1,0 +1,139 @@
+.me {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include flex(center, center);
+    width: 100%;
+    height: 100rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    @extend %hidden;
+    &:target{
+        @extend %block;
+    }
+    & p{
+        @media only screen and (max-width: 576px) {
+            font-size: 1.4rem;
+        }
+    }
+    &__elements {
+        overflow: hidden;
+        @include flex(space-evenly, center, column);
+        position: relative;
+        top: 11rem;
+        right: 13rem;
+        width: 70%;
+        height: 70rem;
+        margin: 1rem;
+        padding: 1rem;
+        z-index: 1001;
+        background-color: $color-white;
+        border-radius: 40px;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            right: 0;
+        }
+        @media only screen and (min-width: 1200px) {
+            right: 26rem;
+        }
+    }
+    &__close{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        padding: 1rem;
+        color: $color-black1;
+        background-color: $color-white;
+        box-shadow: 0 0 3px #727272;
+        &:hover{
+            transform: translate(0,-5px);
+            box-shadow: 7px 8px 20px 0px rgba(0,0,0,0.75);
+            @media only screen and (max-width: 576px) {
+                box-shadow: none;
+                transform: scale(1.5) translate(-10px,0);
+            }
+        }
+        @media only screen and (max-width: 576px) {
+            box-shadow: none;
+        }
+
+    }
+    &__h1 {
+        font-family: "lalezar";
+        position: absolute;
+        top: 1rem;
+        color: $color-red1;
+        padding: 1rem;
+        & > span {
+            position: relative;
+            bottom: 0;
+            transition: all 0.4s ease;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            left: 30%;
+            width: 100%;
+            height: 5.3rem;
+            border-bottom: 4px solid $color-red4;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 50%;
+            border-right: 2px solid $color-red4;
+            border-left: 0px solid $color-red4;
+            transform: rotate(323deg);
+            transition: all 0.4s ease;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            right: 30%;
+            width: 100%;
+            height: 5.3rem;
+            border-bottom: 4px solid $color-red4;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 30%;
+            border-right: 0px solid $color-red4;
+            border-left: 2px solid $color-red4;
+            transform: rotate(-323deg);
+            transition: all 0.4s ease;
+        }
+        &:hover {
+            .h1__span {
+                bottom: 1.5rem;
+                text-shadow: 105px 36px 50px $color-red4;
+            }
+        }
+        &:hover::after {
+            transform: scale(0.7) rotate(-45deg);
+            border-right: 4px solid $color-red4;
+        }
+        &:hover::before {
+            transform: scale(0.7) rotate(45deg);
+            border-left: 4px solid $color-red4;
+        }
+    }
+    &__images {
+        position: absolute;
+        top: 22rem;
+        right: -3rem;
+        bottom: 14rem;
+        left: 1rem;
+        margin: 1rem;
+        @include flex(space-evenly, center);
+        @media only screen and (max-width: 576px) {
+            bottom: 4rem;
+        }
+        &__1 {
+            border-radius: 10px;
+            height: 10rem;
+        }
+        &__2 {
+            border-radius: 15px;
+            height: 17rem;
+        }
+    }
+}

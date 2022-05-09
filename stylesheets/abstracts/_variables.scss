@@ -1,6 +1,7 @@
 $base-path: "../";
 $font-stack: Verdana, "vazir", "lalezar", "Font Awesome 5 Free",Tahoma, sans-serif;
 
+$color-black1:rgba(33,36,37,0.9164040616246498);
 $color-white: white;
 
 $color-blue1: #0d62da;
@@ -29,6 +30,7 @@ $color-orange3: #993e01;
 $color-red1: #f15a24;
 $color-red2: #f70000;
 $color-red3: #ac194e;
+$color-red4: #9c2b02;
 
 $color-gray1: #f1f1f1;
 $color-gray2: #cccccc;
@@ -43,7 +45,7 @@ $blue-gradient: -45deg, #85b9dd 0%, #bbd7e9 100%;
 $pink-gradient: -45deg, #fd8ba6 0%, #bd88ec 100%;
 $purple-gradient: to right, rgba(196, 136, 229, 0.5), rgba(133, 185, 221, 0.5);
 $instagram-gradient:linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-
+$black-blue-gradient:linear-gradient(90deg, rgba(28,31,31,0.6839110644257703) 19%, rgba(35,179,202,0.9164040616246498) 25%, rgba(34,193,195,0.8547794117647058) 42%);
 $cubic-bezier: cubic-bezier(0.55, -0.45, 0.57, 1.46);
 $cubic-bezier2: cubic-bezier(1, -1.61, 0, 1.74);
 

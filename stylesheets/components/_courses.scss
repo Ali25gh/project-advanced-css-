@@ -253,6 +253,10 @@
         color: $color-gold2;
         cursor: pointer;
         font-size: 2rem;
+        transition: all .3s ease;
+        &:hover{
+            transform: scale(1.12);
+        }
         &:hover ~ .course__star {
             color: $color-gray2;
         }

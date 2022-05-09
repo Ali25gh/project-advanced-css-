@@ -127,7 +127,111 @@
             transition: opacity 1s 1.05s ease, transform 0.8s 1.05s ease;
         }
     }
-    
+    &__me {
+        @include flex(center, center);
+        top: 10rem;
+        width: 40%;
+        white-space: nowrap;
+
+        transition: all 0.2s ease-in-out;
+        background-size: 200% 100%;
+        & > span {
+            position: relative;
+            bottom: 0;
+            transition: all 0.4s .1s ease;
+            color: #ba7ee2;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgb(131, 58, 180);
+            background: linear-gradient(
+                90deg,
+                rgba(131, 58, 180, 1) 0%,
+                rgba(88, 114, 211, 0) 42%,
+                rgba(70, 138, 224, 0) 66%,
+                rgba(29, 191, 253, 1) 100%,
+                rgba(252, 176, 69, 1) 100%
+            );
+            opacity: 0.5;
+            transition: all 0.3s ease-in-out;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 60rem;
+            left: 0;
+            bottom: 0;
+            background: rgb(63, 94, 251);
+            background: linear-gradient(
+                90deg,
+                rgba(63, 94, 251, 1) 0%,
+                rgba(84, 192, 178, 0.41780462184873945) 41%,
+                rgba(168, 80, 170, 0.5578606442577031) 51%,
+                rgba(252, 70, 107, 0) 82%
+            );
+            transition: all 0.3s ease-in-out;
+            opacity: 0.5;
+        }
+        & > img {
+            position: absolute;
+            right: 60rem;
+            border-radius: 50%;
+            width: 10%;
+            height: 1rem;
+            width: 20%;
+            height: 4rem;
+            transition: all .5s cubic-bezier(1, -0.21, 0.1, 1.04);
+            opacity: 0.5;
+            @media only screen and (min-width: 1400px) {
+                width: 15%;
+            }
+            @media only screen and (max-width: 992px) {
+                width: 25%;
+            }
+            @media only screen and (max-width: 768px) {
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            & > span {
+                transform:scale(1.03) translate(70px,-1px);
+                color: #848584;
+                @media only screen and (max-width: 1200px) {
+                    transform:scale(1.03) translate(40px,-1px);
+                }
+                @media only screen and (max-width: 992px) {
+                    transform:scale(1.03) translate(0,-1px);
+                }
+                @media only screen and (max-width: 768px) {
+                    color: $color-orange1;
+                    transform:scale(1.2);
+
+                }
+            }
+            &::after {
+                right: 0;
+                @media only screen and (max-width: 768px) {
+                    right: 60rem;
+                }
+            }
+            &::before {
+                left: 60rem;
+                @media only screen and (max-width: 768px) {
+                    left: 60rem;
+                }
+            }
+            & > img {
+                right: 0;
+            }
+        }
+    }
 }
 
 .shadow-none {
