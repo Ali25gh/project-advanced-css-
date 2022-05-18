@@ -3766,17 +3766,24 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .nav__mobaile-wrap {
     position: fixed;
-    top: 9.2rem;
+    top: 9.05rem;
     right: 0;
     bottom: 0;
     left: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     z-index: 100;
-    display: none;
     width: 100vw;
     height: auto;
     background-color: #edfcff;
+  }
+  .nav__burger-checkbox:not(:checked) ~ .nav__mobaile-wrap {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all  .6s ease;
+    transition: all  .6s ease;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
   }
   .nav__burger-checkbox:checked ~ .nav__mobaile-wrap {
     display: block;

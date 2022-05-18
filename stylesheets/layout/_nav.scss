@@ -253,7 +253,7 @@
     @media only screen and (max-width: 768px) {
         &__mobaile-wrap {
             position: fixed;
-            top: 9.2rem;
+            top: 9.05rem;
             right: 0;
             bottom: 0;
             left: 0;
@@ -261,14 +261,21 @@
             overflow-y: scroll;
             // mikhahim karbar dar mobaile rooye mehvar y pish beravad (bala)
             z-index: 100;
-            display: none;
+            
             width: 100vw;
             height: auto;
             // baraye inke andaze chaild khod shavad (bala)
             background-color: $color-blue4;
+            
         }
 
-
+        &__burger-checkbox:not(:checked){
+            & ~ .nav__mobaile-wrap {
+                transform: scale(0);
+                transition: all  .6s ease;
+                transform-origin: top right;
+            }
+        }
 
         &__burger-checkbox:checked {
             & ~ .nav__mobaile-wrap {
@@ -293,6 +300,8 @@
             }
 
         }
+        
+
         &__link {
             width: calc(100vw - 3rem);
         }
