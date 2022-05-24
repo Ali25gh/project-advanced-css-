@@ -3304,16 +3304,13 @@ a:hover {
 
 .me__close {
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   right: 3rem;
   padding: 1rem;
   color: rgba(33, 36, 37, 0.916404);
   background-color: white;
   -webkit-box-shadow: 0 0 3px #727272;
           box-shadow: 0 0 3px #727272;
-}
-
-.me__close:hover {
   -webkit-transform: translate(0, -5px);
           transform: translate(0, -5px);
   -webkit-box-shadow: 7px 8px 20px 0px rgba(0, 0, 0, 0.75);
@@ -3321,7 +3318,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 576px) {
-  .me__close:hover {
+  .me__close {
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transform: scale(1.5) translate(-10px, 0);
@@ -3329,10 +3326,23 @@ a:hover {
   }
 }
 
+.me__close:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 576px) {
+  .me__close:hover {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .me__close {
     -webkit-box-shadow: none;
             box-shadow: none;
+    font-size: 1rem;
   }
 }
 
